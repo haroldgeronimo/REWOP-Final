@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: ea7e7787b0c32f746b876014bc79d080
+timeCreated: 1512404876
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: ISOCTEUR
+  fontNames:
+  - ISOCTEUR
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: c87f543e44b45f94bb14ca571021e208, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

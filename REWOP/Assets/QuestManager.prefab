@@ -1,0 +1,378 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1048855251093918}
+  m_IsPrefabParent: 1
+--- !u!1 &1019078755137892
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4187756342496858}
+  - component: {fileID: 114294541019602196}
+  m_Layer: 0
+  m_Name: Quest 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!1 &1023982614399942
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4401895644495562}
+  - component: {fileID: 114131701394054994}
+  m_Layer: 0
+  m_Name: Quest 3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!1 &1048855251093918
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4091312450284660}
+  - component: {fileID: 114907290356309620}
+  m_Layer: 0
+  m_Name: QuestManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1375166516090486
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4332615585425284}
+  - component: {fileID: 114311439742002190}
+  m_Layer: 0
+  m_Name: Quest 0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!1 &1676998223547654
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4440956146545974}
+  - component: {fileID: 114373638868574572}
+  m_Layer: 0
+  m_Name: Quest 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!1 &1718932633481616
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4561360794528176}
+  - component: {fileID: 114714109406734708}
+  m_Layer: 0
+  m_Name: Quest 4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &4091312450284660
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1048855251093918}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4332615585425284}
+  - {fileID: 4187756342496858}
+  - {fileID: 4440956146545974}
+  - {fileID: 4401895644495562}
+  - {fileID: 4561360794528176}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4187756342496858
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1019078755137892}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4091312450284660}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4332615585425284
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1375166516090486}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4091312450284660}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4401895644495562
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1023982614399942}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4091312450284660}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4440956146545974
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1676998223547654}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4091312450284660}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4561360794528176
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1718932633481616}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4091312450284660}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114131701394054994
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1023982614399942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbd727be24d349042a34a62e5488f084, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questNumber: 3
+  QM: {fileID: 114907290356309620}
+  Title: Find the Bag
+  Description: General Lamak left his bag on the beach.
+  IsCollection: 1
+  EndInstant: 0
+  itemTag: bag
+  currentCount: 0
+  required: 1
+  EndQuestTrigger: {fileID: 0}
+  startDialogue:
+    name: General Lamak
+    sentences:
+    - H..H..Hey!
+    - Yes, y-you. You're N..N..Nexo right?
+    - I know where they took your friends. I'm pretty sure...
+    - You're friends are in the Fort but, the gate is closed because of the attack.
+    - 'You want the key to the gate? '
+    - 'The thing is earlier I was at the beach when the attack happened. In panic,
+      I ran back to my house. '
+    - The key is in the bag. Would you mind getting the bag for me?
+  endDialogue:
+    name: General Lamak
+    sentences:
+    - Woah! Good thing the bag is safe!
+    - Let me get the key for you...
+    - Remember that this creatures have set up their base in the Fort. Im really sure
+      your friends are there.
+    - Fight with all you courage. The people of Eankor is with you to end this plague
+      of misery.
+--- !u!114 &114294541019602196
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1019078755137892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbd727be24d349042a34a62e5488f084, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questNumber: 1
+  QM: {fileID: 114907290356309620}
+  Title: Clear out Minions
+  Description: Minions are attacking! defend the village
+  IsCollection: 1
+  EndInstant: 1
+  itemTag: 
+  currentCount: 0
+  required: 5
+  EndQuestTrigger: {fileID: 0}
+  startDialogue:
+    name: 
+    sentences:
+    - Minions are attacking! defend the village
+  endDialogue:
+    name: 
+    sentences:
+    - Village clear!
+--- !u!114 &114311439742002190
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1375166516090486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbd727be24d349042a34a62e5488f084, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questNumber: 0
+  QM: {fileID: 114907290356309620}
+  Title: Find Gear
+  Description: Approach the blacksmith and acquire weapon
+  IsCollection: 0
+  EndInstant: 0
+  itemTag: 
+  currentCount: 0
+  required: 0
+  EndQuestTrigger: {fileID: 0}
+  startDialogue:
+    name: Villager
+    sentences:
+    - Sir! Help us! The town is in dispair!
+    - The Markets has already been raided and we have nowhere to go!
+    - Eankor is our only home so please help us!
+    - Equip yourself and defend this village. You are the only one who can save us.
+    - Quick before they enter the gates!
+  endDialogue:
+    name: Blacksmith
+    sentences:
+    - Hey are you the Great Nexo? You are a Legend sir!
+    - The people of Eankor is in need of you right now.
+    - Take this sword I made and fight for us!
+--- !u!114 &114373638868574572
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1676998223547654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbd727be24d349042a34a62e5488f084, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questNumber: 2
+  QM: {fileID: 114907290356309620}
+  Title: Find General Lamak
+  Description: Your friends are gone and you must find them
+  IsCollection: 0
+  EndInstant: 0
+  itemTag: 
+  currentCount: 0
+  required: 0
+  EndQuestTrigger: {fileID: 0}
+  startDialogue:
+    name: Blacksmith
+    sentences:
+    - You truly are a legend sir! Wait, where are your friends?
+    - Oh! they were abducted?! They went through the gate? Oh no!
+    - You should report this to General Lamak he holds the keys to the village!
+    - He lives at the end of the northern part of the village.
+  endDialogue:
+    name: General Lamak
+    sentences:
+    - Good work soldier!
+    - Come near!
+--- !u!114 &114714109406734708
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1718932633481616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbd727be24d349042a34a62e5488f084, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questNumber: 4
+  QM: {fileID: 114907290356309620}
+  Title: Proceed to the Gate
+  Description: You have the key to the Gate of the village
+  IsCollection: 0
+  EndInstant: 0
+  itemTag: 
+  currentCount: 0
+  required: 0
+  EndQuestTrigger: {fileID: 0}
+  startDialogue:
+    name: 
+    sentences:
+    - Go to the Village Gate
+  endDialogue:
+    name: 
+    sentences:
+    - You are heading to the Markets. Proceed with caution!
+--- !u!114 &114907290356309620
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1048855251093918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b74c58ddbca037499229434b868e127, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  quests:
+  - {fileID: 114311439742002190}
+  - {fileID: 114294541019602196}
+  - {fileID: 114373638868574572}
+  - {fileID: 114131701394054994}
+  - {fileID: 114714109406734708}
+  questCompleted: 
+  activeQuest: 0

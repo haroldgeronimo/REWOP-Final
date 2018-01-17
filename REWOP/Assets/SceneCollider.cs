@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class SceneCollider : MonoBehaviour {
     private SceneControl sc;
-    public string sceneToLoad;
-    public string sceneToUnload;
+    public string[] sceneToLoad;
+    public string[] sceneToUnload;
     private void Start()
     {
 
@@ -14,8 +14,9 @@ public class SceneCollider : MonoBehaviour {
     }
     void LoadScenes()
     {
-
-        sc.UnloadScene(sceneToUnload);
+		foreach (string scene in sceneToUnload) {
+			sc.UnloadScene(scene);
+		}
         StartCoroutine(BufferLoadScene());
     }
 
@@ -25,7 +26,9 @@ public class SceneCollider : MonoBehaviour {
     }
     IEnumerator BufferLoadScene()
     {
-        yield return new WaitForSeconds(1);
-        sc.LoadScene(sceneToLoad);
+		foreach (string scene in sceneToLoad) {
+			yield return new WaitForSeconds (1);
+			sc.LoadScene (scene);
+		}
     }
 }

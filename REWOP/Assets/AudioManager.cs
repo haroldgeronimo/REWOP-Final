@@ -39,6 +39,7 @@ public class AudioManager : MonoBehaviour {
             {
                 GameObject newMusicSource = new GameObject("Music source " + (i + 1));
                 musicSources[i] = newMusicSource.AddComponent<AudioSource>();
+				musicSources [i].GetComponent<AudioSource> ().loop = true;
                 newMusicSource.transform.parent = transform;
             }
             GameObject newSfx2Dsource = new GameObject("2D sfx source");

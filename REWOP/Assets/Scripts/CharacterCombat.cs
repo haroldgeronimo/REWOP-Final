@@ -34,6 +34,7 @@ public class CharacterCombat : MonoBehaviour
     {
         if (attackCooldown <= 0f)
         {
+			AudioManager.instance.PlaySound("Attack",transform.position);
             foreach (CharStats targetStats in targetStatuses)
             {
                 StartCoroutine(DoDamage(targetStats, attackdelay));
@@ -50,7 +51,9 @@ public class CharacterCombat : MonoBehaviour
         yield return new WaitForSeconds(delay);
         stats.TakeDamage(myStats.damage.GetValue());
 
-		SFXPlaying.instance.PlaySound (SFXPlaying.instance.Attack);
+		//SFXPlaying.instance.PlaySound (SFXPlaying.instance.Attack);
+		AudioManager.instance.PlaySound("EnemySound",transform.position);
+
     }
 
 

@@ -14,6 +14,7 @@ public class Enemy : Interactable {
     public override void Interact() {
         base.Interact();
         //Attack
+
         CharacterCombat pC = pM.player.GetComponent<CharacterCombat>();
         if (pC != null) {
             pC.Attack(myStats);

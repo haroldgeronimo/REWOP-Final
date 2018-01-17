@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class MenuManager : MonoBehaviour {
 
-	public GameObject mainMenuHolder;
-	public GameObject optionsMenuHolder;
+
+	//public GameObject optionsMenuHolder;
 
 	public Slider[] volumeSliders;
 
@@ -22,22 +22,23 @@ public class MenuManager : MonoBehaviour {
 		Application.Quit ();
 	}
 
-	public void OptionsMenu()
+/*	public void OptionsMenu()
 	{
 		mainMenuHolder.SetActive (false);
 		optionsMenuHolder.SetActive (true);
 	}
+*/
 
-	public void MainMenu ()
-	{
-		mainMenuHolder.SetActive (true);
-		optionsMenuHolder.SetActive (false);
-	}
-
-	public void MasterVolume(float value)
-	{
+	public void MasterVolume(float value) {
 		AudioManager.instance.SetVolume (value, AudioManager.AudioChannel.Master);
-
-
 	}
+
+	public void MusicVolume(float value) {
+		AudioManager.instance.SetVolume (value, AudioManager.AudioChannel.Music);
+	}
+
+	public void SFXVolume(float value) {
+		AudioManager.instance.SetVolume (value, AudioManager.AudioChannel.Sfx);
+	}
+
 }

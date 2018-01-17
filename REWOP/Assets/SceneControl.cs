@@ -25,6 +25,7 @@ public class SceneControl : MonoBehaviour {
             if (!loadedScene.Contains(sceneName))
                 loadedScene.Add(sceneName);
                 Debug.Log(sceneName + " has been loaded");
+            MusicManager.instance.LevelWasLoaded(sceneName);
             SceneState.Save();
         }
 

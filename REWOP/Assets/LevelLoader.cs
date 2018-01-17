@@ -26,7 +26,7 @@ public class LevelLoader : MonoBehaviour {
             progresstext.text = Mathf.Round(progress * 100f) + "%";
             yield return null;
         }
-    }
+               }
 
 
 }

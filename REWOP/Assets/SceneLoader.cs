@@ -39,7 +39,10 @@ public class SceneLoader : MonoBehaviour {
         {
             yield return new WaitForEndOfFrame();
             sc.LoadScene(scene);
+   
+      
         }
+       
         yield return null;
     }
 }

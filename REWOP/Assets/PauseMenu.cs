@@ -28,6 +28,7 @@ public class PauseMenu : MonoBehaviour {
     public void Menu()
     {
         Toggle();
+        MusicManager.instance.LevelWasLoaded("MainMenu");
         SceneManager.LoadScene(("MainMenu"),LoadSceneMode.Single);
 
     }

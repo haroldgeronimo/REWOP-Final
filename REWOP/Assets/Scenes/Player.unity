@@ -1115,7 +1115,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 493749283}
         m_MethodName: SFXVolume
         m_Mode: 0
         m_Arguments:
@@ -3885,6 +3885,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fa069aef6203cd41b79da841119b65c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fadeSpeed: 0.1
+  DamageSensitivity: 4.5
+  ReturnSensitivity: 4
 --- !u!1 &1017847876
 GameObject:
   m_ObjectHideFlags: 0
@@ -4086,7 +4089,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 493749283}
         m_MethodName: MusicVolume
         m_Mode: 0
         m_Arguments:
@@ -6748,7 +6751,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 493749283}
         m_MethodName: MasterVolume
         m_Mode: 0
         m_Arguments:

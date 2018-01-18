@@ -32,24 +32,46 @@ public class DialogueManager : MonoBehaviour {
 
         DisplayNextSentence();
     }
-
+    string sentence = "";
     public void DisplayNextSentence() {
-        if (sentences.Count == 0) {
+
+        //if (sentences.Count == 0)
+        //{
+        //    EndDialogue();
+        //    return;
+        //}
+        if (!IsTypeSentence && sentences.Count >  0)
+        {
+  
+            sentence = sentences.Dequeue();
+     
+            StopAllCoroutines();
+            StartCoroutine(TypeSentence(sentence));
+        }
+        else if(!IsTypeSentence && sentences.Count <= 0)
+        {
             EndDialogue();
             return;
         }
-        string sentence = sentences.Dequeue();
-        StopAllCoroutines();
-        StartCoroutine(TypeSentence(sentence));
+        else if(IsTypeSentence)
+        {
+    
+            StopAllCoroutines();
+            dialogueText.text = sentence;
+            IsTypeSentence = false;
+   
+        }
     }
-
+    bool IsTypeSentence = false;
     IEnumerator TypeSentence(string sentence) {
+        IsTypeSentence = true;
         dialogueText.text = "";
         foreach (char letter in sentence.ToCharArray()) {
 
             dialogueText.text += letter;
-            yield return null;
+            yield return new WaitForSeconds(0.05f);
         }
+        IsTypeSentence = false;
     }
 
     void EndDialogue() {

@@ -338,7 +338,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46f8fdeea7750e24e81b21f1c8da2113, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lookRadius: 100
+  lookRadius: 50
 --- !u!114 &134135273
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3238,7 +3238,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400042, guid: 7ae3b8bb2370eae41be74c7a83e7a155, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 400042, guid: 7ae3b8bb2370eae41be74c7a83e7a155, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3613,7 +3613,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46f8fdeea7750e24e81b21f1c8da2113, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lookRadius: 100
+  lookRadius: 50
 --- !u!114 &1946128929
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerStats : CharStats {
+    public HurtScript Hurt;
     private void Start()
     {
         Load();
@@ -38,7 +39,11 @@ public class PlayerStats : CharStats {
             SetCurrentHealth(SaveLoadManager.Instance.gameData.PlayerLife);
         }
     }
-
+    public override void TakeDamage(int damage)
+    {
+        Hurt.HurtAccentShow(damage);
+        base.TakeDamage(damage);    
+    }
     public override void SetCurrentHealth(int amount)
     {
         base.SetCurrentHealth(amount);

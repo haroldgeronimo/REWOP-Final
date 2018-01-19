@@ -5,14 +5,16 @@ namespace Footsteps {
 
 	public class CameraFollow : MonoBehaviour {
 
-		[SerializeField] Transform target;
-		[SerializeField] float followLerpFactor = 5f;
+Transform target;
+ float followLerpFactor = 1f;
 
 		Transform thisTransform;
 
 
 		void Start() {
-			if(!target) enabled = false;
+            target = PlayerManager.instance.player.transform;
+
+            if (!target) enabled = false;
 
 			thisTransform = transform;
 		}

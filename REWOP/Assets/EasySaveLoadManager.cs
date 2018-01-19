@@ -92,6 +92,11 @@ public static class QuestState
     public static void Save()
     {
         //Get Quest instance and lagay mo dun ung load hahahhah
+        if(QuestManager.instance == null)
+        {
+            Debug.LogError("QM is null!");
+            return;
+        }
         ES2.Save(QuestManager.instance.questCompleted, folder + "Scenes.dat?tag=questCompleted");
         ///.Instance.savedScenes = ES2.LoadList<bool>(folder + "Quests.dat?tag=questCompleted");
     }

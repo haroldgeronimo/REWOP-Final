@@ -7,6 +7,7 @@ public class SceneCollider : MonoBehaviour {
     private SceneControl sc;
     public string[] sceneToLoad;
     public string[] sceneToUnload;
+    public bool IsTeleport = false;
     private void Start()
     {
 
@@ -14,6 +15,11 @@ public class SceneCollider : MonoBehaviour {
     }
     void LoadScenes()
     {
+        if (IsTeleport)
+        {
+            QuestManager.instance = null; 
+        }
+
 		foreach (string scene in sceneToUnload) {
 			sc.UnloadScene(scene);
 		}

@@ -46,7 +46,7 @@ public class AudioManager : MonoBehaviour {
             sfx2DSource = newSfx2Dsource.AddComponent<AudioSource>();
             newSfx2Dsource.transform.parent = transform;
 
-            audioListener = FindObjectOfType<AudioListener>().transform;
+           // audioListener = FindObjectOfType<AudioListener>().transform;
             if (PlayerManager.instance != null)
             {
                 playerT = PlayerManager.instance.transform;

@@ -29,3 +29,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/w1s2tos3.unity
     guid: 71f43e2722a653147b19d76cf414ec19
+  - enabled: 1
+    path: Assets/Scenes/w2s1tos2.unity
+    guid: bdc45ee52d7aa454ba7a2133b00f74a8

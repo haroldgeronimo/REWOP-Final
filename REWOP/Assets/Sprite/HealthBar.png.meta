@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 8b413f1c51c038648b963ca072bd12ba
-timeCreated: 1512221436
+timeCreated: 1516407605
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -90,12 +90,12 @@ TextureImporter:
       name: HealthBar_0
       rect:
         serializedVersion: 2
-        x: 59
-        y: 858
-        width: 3404
-        height: 595
+        x: 94
+        y: 1022
+        width: 3341
+        height: 982
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -104,13 +104,13 @@ TextureImporter:
       name: HealthBar_1
       rect:
         serializedVersion: 2
-        x: 94
-        y: 665
-        width: 2892
-        height: 149
+        x: 58
+        y: 676
+        width: 2894
+        height: 151
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 144, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -118,13 +118,13 @@ TextureImporter:
       name: HealthBar_2
       rect:
         serializedVersion: 2
-        x: 94
-        y: 411
-        width: 2892
+        x: 55
+        y: 419
+        width: 2893
         height: 149
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 137, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -132,12 +132,12 @@ TextureImporter:
       name: HealthBar_3
       rect:
         serializedVersion: 2
-        x: 94
-        y: 74
+        x: 55
+        y: 79
         width: 364
         height: 292
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

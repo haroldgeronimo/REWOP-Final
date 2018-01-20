@@ -30,8 +30,15 @@ public class PlayerManager : MonoBehaviour {
     public GameObject player;
 
     public void KillPlayer() {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 
+        StartCoroutine(DeathDelay());
+
+    }
+
+    IEnumerator DeathDelay()
+    {
+        yield return new WaitForSeconds(3);
+        Time.timeScale = 0;
     }
 
 }

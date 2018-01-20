@@ -48,6 +48,7 @@ public class EasySaveLoadManager : MonoBehaviour {
 }
 
 #region staticGameObjects
+
 public static class PlayerState {
     public static string folder = EasySaveLoadManager.Instance.folder;
     public static void Save()

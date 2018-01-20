@@ -5,21 +5,25 @@ using UnityEngine.UI;
 
 public class FacialScript : MonoBehaviour {
     public List<Facial> facials;
-    int currentIndex;
+    public Sprite Died;
     public Image FaceUI;
-    int currentHealth;
-    int maxHealth;
-    PlayerStats ps;
-    void Start()
-    {
-        FaceUI = GetComponent<Image>();
-        ps = PlayerManager.instance.player.GetComponent<PlayerStats>();
-    }
-    public IEnumerator ShowDamage(int i)
-    {
-        FaceUI.sprite = facials[i].Hit;
-        yield return new WaitForSeconds(1);  
 
+    public void ShowDamage(int i)
+    {
+        if (i < facials.Count && i >= 0)
+            FaceUI.sprite = facials[i].Hit;
+        else Debug.Log("Index " + i + " is out of facial range ");
+    }
+    public void ShowNormal(int i)
+    {
+        if (i < facials.Count && i >= 0)
+            FaceUI.sprite = facials[i].Normal;
+        else Debug.Log("Index " + i + " is out of facial range ");
+    }
+
+    public void ShowDead()
+    {
+        FaceUI.sprite = Died;
     }
     [System.Serializable()]
     public class Facial

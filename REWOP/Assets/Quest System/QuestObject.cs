@@ -9,6 +9,7 @@ public class QuestObject : MonoBehaviour {
     public string Title;
     [TextArea(3, 5)]
     public string Description;
+    TextMeshProUGUI QuestTitle;
 
 
     public bool IsCollection;
@@ -33,27 +34,29 @@ public class QuestObject : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-     //   titleText.text = "";
-  
-    }
+        //   titleText.text = "";
+           }
 	
 	// Update is called once per frame
 	void Update () {
         if(IsCollection)
-        if (currentCount >= required)
         {
-            if (EndInstant)
+            if (currentCount >= required)
             {
-                QM.activeQuest = -1;
-                QM.quests[questNumber].EndQuest();
-                EndQuest();
+                if (EndInstant)
+                {
+                    QM.activeQuest = -1;
+                    QM.quests[questNumber].EndQuest();
+                    EndQuest();
+                }
             }
-        
-
         }
     }
 
     public void StartQuest() {
+        if(QuestTitle == null)
+        QuestTitle = GameObject.FindGameObjectWithTag("QuestTitle").GetComponent<TextMeshProUGUI>();
+
         if (OnQuestStart != null)
             OnQuestStart();
         QM.ShowStartDialogue(startDialogue);
@@ -92,7 +95,10 @@ public class QuestObject : MonoBehaviour {
             BQ.codeBlocks.SetActive(true);
 
         }
-        
+        if (QuestTitle != null)
+            QuestTitle.text = Title;
+        else
+            Debug.LogWarning("No Quest Title");
       //  titleText.text = Title;
       //Testing
      //   Debug.Log(titleText.text);
@@ -116,7 +122,10 @@ public class QuestObject : MonoBehaviour {
         QM.ShowEndDialogue(endDialogue);
         QM.questCompleted[questNumber] = true;
         gameObject.SetActive(false);
-
+        if (QuestTitle != null)
+            QuestTitle.text = "";
+        else
+            Debug.LogWarning("No Quest Title");
     }
     public void FailQuest()
     {

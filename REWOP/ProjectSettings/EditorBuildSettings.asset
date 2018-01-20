@@ -27,6 +27,12 @@ EditorBuildSettings:
     path: Assets/w1s3b.unity
     guid: 715336e77707e374486558abb2c23b5f
   - enabled: 1
+    path: Assets/W2S1.unity
+    guid: 37da87a047d6aac43bc5708b6e5464df
+  - enabled: 1
+    path: Assets/w2s2.unity
+    guid: 73232d3ed3bf1234fbdc56878c62059d
+  - enabled: 1
     path: Assets/Scenes/w1s2tos3.unity
     guid: 71f43e2722a653147b19d76cf414ec19
   - enabled: 1

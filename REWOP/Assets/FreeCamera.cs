@@ -21,7 +21,11 @@ public class FreeCamera : MonoBehaviour
 
     private void Start()
     {
-        lookAt = PlayerManager.instance.player.transform;
+        if (PlayerManager.instance != null)
+            lookAt = PlayerManager.instance.player.transform;
+        else
+            lookAt = transform;
+      
 
         //targetPos = target.position + position.targetPosOffset;
         //destination = Quaternion.Euler(orbit.xRotation, orbit.yRotation, 0) * -Vector3.forward * position.distanceFromTarget;
@@ -199,11 +203,11 @@ public class FreeCamera : MonoBehaviour
     {
         public LayerMask collisionLayer;
 
-        [HideInInspector]
+      //  [HideInInspector]
         public bool colliding = false;
-        [HideInInspector]
+       // [HideInInspector]
         public Vector3[] adjustedCameraClipPoints;
-        [HideInInspector]
+       // [HideInInspector]
         public Vector3[] desiredCameraClipPoints;
 
         Camera camera;

@@ -1504,15 +1504,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4881523028946506, guid: d862650bd0e015447aac1851aceae455, type: 2}
       propertyPath: m_LocalScale.x
-      value: 2.0862956
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4881523028946506, guid: d862650bd0e015447aac1851aceae455, type: 2}
       propertyPath: m_LocalScale.y
-      value: 2.0862954
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4881523028946506, guid: d862650bd0e015447aac1851aceae455, type: 2}
       propertyPath: m_LocalScale.z
-      value: 2.0862968
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4881523028946506, guid: d862650bd0e015447aac1851aceae455, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -2258,7 +2258,7 @@ Prefab:
     - target: {fileID: 114373638868574572, guid: 7ccae628646218a448a0437c7148d6b0,
         type: 2}
       propertyPath: startDialogue.sentences.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114131701394054994, guid: 7ccae628646218a448a0437c7148d6b0,
         type: 2}
@@ -2406,7 +2406,9 @@ Prefab:
     - target: {fileID: 114294541019602196, guid: 7ccae628646218a448a0437c7148d6b0,
         type: 2}
       propertyPath: startDialogue.sentences.Array.data[0]
-      value: I heard something openning!
+      value: 'Another door is opening?!
+
+'
       objectReference: {fileID: 0}
     - target: {fileID: 114294541019602196, guid: 7ccae628646218a448a0437c7148d6b0,
         type: 2}
@@ -2416,7 +2418,7 @@ Prefab:
     - target: {fileID: 114294541019602196, guid: 7ccae628646218a448a0437c7148d6b0,
         type: 2}
       propertyPath: endDialogue.sentences.Array.data[0]
-      value: EZ af!
+      value: All clear!
       objectReference: {fileID: 0}
     - target: {fileID: 114373638868574572, guid: 7ccae628646218a448a0437c7148d6b0,
         type: 2}
@@ -2451,7 +2453,7 @@ Prefab:
     - target: {fileID: 114373638868574572, guid: 7ccae628646218a448a0437c7148d6b0,
         type: 2}
       propertyPath: startDialogue.sentences.Array.data[1]
-      value: Oh! they were abducted?! They went through the gate? Oh no!
+      value: Is this a bug?
       objectReference: {fileID: 0}
     - target: {fileID: 114373638868574572, guid: 7ccae628646218a448a0437c7148d6b0,
         type: 2}
@@ -2466,7 +2468,7 @@ Prefab:
     - target: {fileID: 114373638868574572, guid: 7ccae628646218a448a0437c7148d6b0,
         type: 2}
       propertyPath: startDialogue.sentences.Array.data[0]
-      value: Another f*cking door is open
+      value: Door again?!
       objectReference: {fileID: 0}
     - target: {fileID: 114373638868574572, guid: 7ccae628646218a448a0437c7148d6b0,
         type: 2}
@@ -2481,7 +2483,7 @@ Prefab:
     - target: {fileID: 114373638868574572, guid: 7ccae628646218a448a0437c7148d6b0,
         type: 2}
       propertyPath: endDialogue.sentences.Array.data[0]
-      value: F*ck this sh*t
+      value: All clear!
       objectReference: {fileID: 0}
     - target: {fileID: 1048855251093918, guid: 7ccae628646218a448a0437c7148d6b0, type: 2}
       propertyPath: m_IsActive
@@ -2552,7 +2554,7 @@ Prefab:
     - target: {fileID: 114131701394054994, guid: 7ccae628646218a448a0437c7148d6b0,
         type: 2}
       propertyPath: startDialogue.sentences.Array.data[0]
-      value: WTF!?!?
+      value: What is this!?!?
       objectReference: {fileID: 0}
     - target: {fileID: 114131701394054994, guid: 7ccae628646218a448a0437c7148d6b0,
         type: 2}

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using TMPro;
 public class QuestObject : MonoBehaviour {
     public int questNumber;
@@ -29,6 +30,10 @@ public class QuestObject : MonoBehaviour {
     public delegate void QuestEnded();
     public static event QuestEnded OnQuestEnd;
 
+    public UnityEvent StartEvent;
+    public UnityEvent EndEvent;
+
+
 
     //public TextMeshProUGUI titleText;
 
@@ -54,7 +59,8 @@ public class QuestObject : MonoBehaviour {
     }
 
     public void StartQuest() {
-        if(QuestTitle == null)
+    
+        if (QuestTitle == null)
         QuestTitle = GameObject.FindGameObjectWithTag("QuestTitle").GetComponent<TextMeshProUGUI>();
 
         if (OnQuestStart != null)
@@ -82,6 +88,8 @@ public class QuestObject : MonoBehaviour {
 
                 EndQuestTrigger.gameObject.SetActive(false);
             }
+
+            StartEvent.Invoke();
         }
         else if (IsBoss)
         {
@@ -126,6 +134,9 @@ public class QuestObject : MonoBehaviour {
             QuestTitle.text = "";
         else
             Debug.LogWarning("No Quest Title");
+
+
+        EndEvent.Invoke();
     }
     public void FailQuest()
     {

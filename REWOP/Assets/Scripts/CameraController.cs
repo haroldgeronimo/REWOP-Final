@@ -5,22 +5,22 @@ using UnityEngine;
 public class CameraController : MonoBehaviour {
     public Transform target;
     #region TopView
-    //
-    //public Vector3 offset;
-    //public float smoothSpeed;
 
-    //// public float Zoom = 2.48f;
-    //// public float currentZoom;
-    ////private float pitch = 2f;
-    //// Use this for initialization
-    //private void FixedUpdate()
-    //{
-    //    Vector3 desiredPosition = target.position + offset;
-    //    Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed * Time.deltaTime);
-    //    transform.position = smoothedPosition;
-    //    transform.LookAt(target);
+    public Vector3 offset;
+    public float smoothSpeed;
 
-    //}
+    // public float Zoom = 2.48f;
+    // public float currentZoom;
+    //private float pitch = 2f;
+    // Use this for initialization
+    private void FixedUpdate()
+    {
+        Vector3 desiredPosition = target.position + offset;
+        Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed * Time.deltaTime);
+        transform.position = smoothedPosition;
+        transform.LookAt(target);
+
+    }
     #endregion
     #region ThirdPerson
     //public VirtualMouse mouse;
@@ -48,10 +48,10 @@ public class CameraController : MonoBehaviour {
     //}
     #endregion
 
-    private void Start()
-    {
-        target = PlayerManager.instance.player.transform;
-    }
+    //private void Start()
+    //{
+    //    target = PlayerManager.instance.player.transform;
+    //}
 
 
     #region SimpleThirdPerson

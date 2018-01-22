@@ -9,6 +9,8 @@ public class DialogueManager : MonoBehaviour {
     public Animator dBoxAnimator;
     public Animator CtrlAnimator;
     public PlayerMotor playerMotor;
+    [HideInInspector]
+    public bool IsDone = false;
     Queue<string> sentences;
 	// Use this for initialization
 	void Start () {
@@ -16,6 +18,7 @@ public class DialogueManager : MonoBehaviour {
 	}
 
     public void StartDialogue(Dialogue dialogue) {
+        IsDone = false;
         sentences.Clear();
         dBoxAnimator.SetBool("IsOpen", true);
         CtrlAnimator.SetBool("IsOpen", false);
@@ -76,8 +79,8 @@ public class DialogueManager : MonoBehaviour {
 
     void EndDialogue() {
         // Debug.Log("End of Conversation");
-
-      //  Time.timeScale = 1;
+        IsDone = true;
+        //  Time.timeScale = 1;
         playerMotor.Freeze = false;//potential change here to play time
         dBoxAnimator.SetBool("IsOpen",false);
         CtrlAnimator.SetBool("IsOpen", true);

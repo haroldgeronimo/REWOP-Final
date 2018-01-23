@@ -887,6 +887,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 114394353942283336, guid: 0b5d2936f53444f4788cffb72bb44057,
         type: 2}
+      propertyPath: sceneToLoad.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114394353942283336, guid: 0b5d2936f53444f4788cffb72bb44057,
+        type: 2}
       propertyPath: sceneToUnload.Array.size
       value: 0
       objectReference: {fileID: 0}
@@ -952,6 +957,11 @@ Prefab:
         type: 2}
       propertyPath: sceneToUnload.Array.data[0]
       value: w1s3b
+      objectReference: {fileID: 0}
+    - target: {fileID: 114394353942283336, guid: 0b5d2936f53444f4788cffb72bb44057,
+        type: 2}
+      propertyPath: sceneToLoad.Array.data[1]
+      value: w2s1tos2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0b5d2936f53444f4788cffb72bb44057, type: 2}

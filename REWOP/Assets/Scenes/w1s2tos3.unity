@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.45088845, g: 0.5007891, b: 0.57456994, a: 1}
+  m_IndirectSpecularColor: {r: 0.3731193, g: 0.38073996, b: 0.35872692, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -137,7 +137,7 @@ Prefab:
     - target: {fileID: 114644259206732464, guid: 12a5385780a5ec744bedd020ac5cd565,
         type: 2}
       propertyPath: sceneToUnload.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4964372604873626, guid: 12a5385780a5ec744bedd020ac5cd565, type: 2}
       propertyPath: m_LocalPosition.x
@@ -235,12 +235,12 @@ Prefab:
     - target: {fileID: 114644259206732464, guid: 12a5385780a5ec744bedd020ac5cd565,
         type: 2}
       propertyPath: sceneToUnload.Array.data[1]
-      value: w1s1tos2
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 114559946000907930, guid: 12a5385780a5ec744bedd020ac5cd565,
         type: 2}
       propertyPath: sceneToUnload.Array.data[1]
-      value: w1s1tos2
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 114644259206732464, guid: 12a5385780a5ec744bedd020ac5cd565,
         type: 2}

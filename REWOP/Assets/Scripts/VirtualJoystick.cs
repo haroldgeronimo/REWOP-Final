@@ -22,9 +22,9 @@ public class VirtualJoystick : MonoBehaviour, IDragHandler, IPointerUpHandler, I
             pos.x = (pos.x/bgImg.rectTransform.sizeDelta.x);
             pos.y = (pos.y/bgImg.rectTransform.sizeDelta.y);
 
-
-            float x = (bgImg.rectTransform.pivot.x == 1) ? pos.x * 2 + 1 : pos.x * 2 - 1;
-            float y = (bgImg.rectTransform.pivot.y == 1) ? pos.y * 2 + 1 : pos.y * 2 - 1;
+             
+            float x = (bgImg.rectTransform.pivot.x == 1) ? pos.x * 2 : pos.x * 2 ;
+            float y = (bgImg.rectTransform.pivot.y == 1) ? pos.y * 2 : pos.y * 2;
 
             InputVector = new Vector3(x,0,y);
           //  InputVector = new Vector3(pos.x * 2 + 1, 0, pos.y * 2 - 1);

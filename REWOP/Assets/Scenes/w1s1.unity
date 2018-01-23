@@ -117,6 +117,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114907290356309620, guid: 7ccae628646218a448a0437c7148d6b0,
+        type: 2}
+      propertyPath: quests.Array.size
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 114294541019602196, guid: 7ccae628646218a448a0437c7148d6b0,
         type: 2}
       propertyPath: EndEvent.m_PersistentCalls.m_Calls.Array.size
@@ -199,9 +204,91 @@ Prefab:
       propertyPath: EndEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 114907290356309620, guid: 7ccae628646218a448a0437c7148d6b0,
+        type: 2}
+      propertyPath: quests.Array.data[4]
+      value: 
+      objectReference: {fileID: 917055704}
+    - target: {fileID: 114907290356309620, guid: 7ccae628646218a448a0437c7148d6b0,
+        type: 2}
+      propertyPath: quests.Array.data[3]
+      value: 
+      objectReference: {fileID: 1813944}
+    - target: {fileID: 114907290356309620, guid: 7ccae628646218a448a0437c7148d6b0,
+        type: 2}
+      propertyPath: quests.Array.data[2]
+      value: 
+      objectReference: {fileID: 18156074}
+    - target: {fileID: 114907290356309620, guid: 7ccae628646218a448a0437c7148d6b0,
+        type: 2}
+      propertyPath: quests.Array.data[1]
+      value: 
+      objectReference: {fileID: 1813945}
+    - target: {fileID: 4332615585425284, guid: 7ccae628646218a448a0437c7148d6b0, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4187756342496858, guid: 7ccae628646218a448a0437c7148d6b0, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4401895644495562, guid: 7ccae628646218a448a0437c7148d6b0, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4440956146545974, guid: 7ccae628646218a448a0437c7148d6b0, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4561360794528176, guid: 7ccae628646218a448a0437c7148d6b0, type: 2}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114311439742002190, guid: 7ccae628646218a448a0437c7148d6b0,
+        type: 2}
+      propertyPath: questNumber
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114294541019602196, guid: 7ccae628646218a448a0437c7148d6b0,
+        type: 2}
+      propertyPath: questNumber
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114373638868574572, guid: 7ccae628646218a448a0437c7148d6b0,
+        type: 2}
+      propertyPath: questNumber
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114131701394054994, guid: 7ccae628646218a448a0437c7148d6b0,
+        type: 2}
+      propertyPath: questNumber
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114714109406734708, guid: 7ccae628646218a448a0437c7148d6b0,
+        type: 2}
+      propertyPath: questNumber
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7ccae628646218a448a0437c7148d6b0, type: 2}
   m_IsPrefabParent: 0
+--- !u!4 &1813943 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4091312450284660, guid: 7ccae628646218a448a0437c7148d6b0,
+    type: 2}
+  m_PrefabInternal: {fileID: 1813942}
+--- !u!114 &1813944 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114373638868574572, guid: 7ccae628646218a448a0437c7148d6b0,
+    type: 2}
+  m_PrefabInternal: {fileID: 1813942}
+  m_Script: {fileID: 11500000, guid: cbd727be24d349042a34a62e5488f084, type: 3}
+--- !u!114 &1813945 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114311439742002190, guid: 7ccae628646218a448a0437c7148d6b0,
+    type: 2}
+  m_PrefabInternal: {fileID: 1813942}
+  m_Script: {fileID: 11500000, guid: cbd727be24d349042a34a62e5488f084, type: 3}
 --- !u!114 &18156074 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114294541019602196, guid: 7ccae628646218a448a0437c7148d6b0,
@@ -249,7 +336,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a38181ba29de4d44383ebe5dadf54206, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questNumber: 4
+  questNumber: 5
   IsStartQuest: 1
 --- !u!65 &62860064
 BoxCollider:
@@ -684,7 +771,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a38181ba29de4d44383ebe5dadf54206, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questNumber: 1
+  questNumber: 2
   IsStartQuest: 1
 --- !u!65 &189896865
 BoxCollider:
@@ -710,7 +797,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   QM: {fileID: 999103665}
-  questNumber: 1
+  questNumber: 2
   enemies: {fileID: 206624718}
 --- !u!114 &189896867
 MonoBehaviour:
@@ -724,7 +811,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   QM: {fileID: 999103665}
-  questNumber: 0
+  questNumber: 1
   Sword: {fileID: 0}
   Attack: {fileID: 0}
 --- !u!1 &206624718
@@ -950,6 +1037,89 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4886c20df6b9e8145b26d3c0a9dfce18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &305483890
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1375166516090486, guid: 7ccae628646218a448a0437c7148d6b0,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 305483891}
+  - component: {fileID: 305483892}
+  m_Layer: 0
+  m_Name: PreQuest
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &305483891
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 4332615585425284, guid: 7ccae628646218a448a0437c7148d6b0,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 305483890}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1813943}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &305483892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 114311439742002190, guid: 7ccae628646218a448a0437c7148d6b0,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 305483890}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbd727be24d349042a34a62e5488f084, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questNumber: 0
+  QM: {fileID: 999103665}
+  Title: Find the Villager
+  Description: Find the villager near the well
+  IsCollection: 0
+  IsBoss: 0
+  EndInstant: 0
+  itemTag: 
+  currentCount: 0
+  required: 0
+  EndQuestTrigger: {fileID: 0}
+  startDialogue:
+    name: Villager
+    sentences:
+    - Sir! Help us! The town is in dispair!
+    - The Markets has already been raided and we have nowhere to go!
+    - Eankor is our only home so please help us!
+    - Equip yourself and defend this village. You are the only one who can save us.
+    - Quick before they enter the gates!
+  endDialogue:
+    name: Blacksmith
+    sentences:
+    - Hey are you the Great Nexo? You are a Legend sir!
+    - The people of Eankor is in need of you right now.
+    - Take this sword I made and fight for us!
+  BQ:
+    battleCam: {fileID: 0}
+    codeBlocks: {fileID: 0}
+    mainCam: {fileID: 0}
+    mainCanvas: {fileID: 0}
+  StartEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  EndEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!1 &378224609 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1288902680984800, guid: 3a8a06ec3f78b3f48a2b0755e801264b,
@@ -1027,7 +1197,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a38181ba29de4d44383ebe5dadf54206, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questNumber: 2
+  questNumber: 3
   IsStartQuest: 1
 --- !u!65 &422039329
 BoxCollider:
@@ -1290,13 +1460,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 463690748}
-  m_LocalRotation: {x: -0.32969016, y: -0.012983337, z: 0.004533897, w: -0.94398904}
-  m_LocalPosition: {x: 20.179335, y: 85.05793, z: 55.106087}
+  m_LocalRotation: {x: 0.18228619, y: 0.18664955, z: -0.03526779, w: 0.9647227}
+  m_LocalPosition: {x: 20.5, y: 83.3, z: 57.7}
   m_LocalScale: {x: 1.0000007, y: 1.0000002, z: 1.0000002}
   m_Children: []
   m_Father: {fileID: 478633512}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 21.4, y: 21.9, z: 0}
 --- !u!1 &478633511
 GameObject:
   m_ObjectHideFlags: 0
@@ -1306,7 +1476,7 @@ GameObject:
   m_Component:
   - component: {fileID: 478633512}
   m_Layer: 0
-  m_Name: QuestCameras
+  m_Name: CutSceneCameras
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1634,7 +1804,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a38181ba29de4d44383ebe5dadf54206, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questNumber: 0
+  questNumber: 1
   IsStartQuest: 0
 --- !u!65 &720266643
 BoxCollider:
@@ -2028,7 +2198,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a38181ba29de4d44383ebe5dadf54206, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questNumber: 3
+  questNumber: 4
   IsStartQuest: 0
 --- !u!65 &974169426
 BoxCollider:
@@ -2252,7 +2422,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a38181ba29de4d44383ebe5dadf54206, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questNumber: 0
+  questNumber: 1
   IsStartQuest: 1
 --- !u!65 &1026714098
 BoxCollider:
@@ -2334,7 +2504,7 @@ MonoBehaviour:
       sentences:
       - We are sucked into WOL!
       - We're stuck in the game what should we do?
-    camera: {fileID: 2001139204}
+    camera: {fileID: 2065901846}
   - target: {fileID: 0}
     offset: {x: 0, y: 0, z: 0}
     dialogue:
@@ -3654,7 +3824,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a38181ba29de4d44383ebe5dadf54206, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questNumber: 2
+  questNumber: 3
   IsStartQuest: 0
 --- !u!65 &1711907941
 BoxCollider:
@@ -3887,7 +4057,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a38181ba29de4d44383ebe5dadf54206, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questNumber: 3
+  questNumber: 4
   IsStartQuest: 1
 --- !u!65 &1778631816
 BoxCollider:
@@ -4435,13 +4605,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2001139199}
-  m_LocalRotation: {x: -0.02543296, y: 0.9339581, z: -0.34995458, w: -0.06787697}
-  m_LocalPosition: {x: 22.973736, y: 86.97141, z: 63.009884}
+  m_LocalRotation: {x: 0.0046192533, y: -0.99488735, z: 0.08529192, w: 0.05388127}
+  m_LocalPosition: {x: 21.5, y: 83.1, z: 58.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 478633512}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 9.8, y: -173.8, z: 0}
 --- !u!81 &2001139201
 AudioListener:
   m_ObjectHideFlags: 0
@@ -4727,7 +4897,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemTag: bag
-  questNumber: 3
+  questNumber: 4
   QO: {fileID: 917055704}
   EndQT: {fileID: 974169425}
 --- !u!114 &2045168334
@@ -4774,13 +4944,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2065901841}
-  m_LocalRotation: {x: -0.32969016, y: -0.012983337, z: 0.004533897, w: -0.94398904}
-  m_LocalPosition: {x: 20.179335, y: 85.05793, z: 55.106087}
+  m_LocalRotation: {x: 0.042277105, y: 0.8043808, z: -0.057658695, w: 0.5897964}
+  m_LocalPosition: {x: 22.3, y: 83.1, z: 59.7}
   m_LocalScale: {x: 0.9999999, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 478633512}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 8.2, y: 107.5, z: 0}
 --- !u!81 &2065901843
 AudioListener:
   m_ObjectHideFlags: 0
@@ -4881,7 +5051,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a38181ba29de4d44383ebe5dadf54206, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questNumber: 4
+  questNumber: 5
   IsStartQuest: 0
 --- !u!65 &2090241058
 BoxCollider:
@@ -4908,7 +5078,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 983801153}
   QM: {fileID: 999103665}
-  questNumber: 4
+  questNumber: 5
   ParamName: Open2
   State: 1
 --- !u!114 &2090241060
@@ -4924,7 +5094,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 1334877028}
   QM: {fileID: 999103665}
-  questNumber: 4
+  questNumber: 5
   ParamName: Open
   State: 1
 --- !u!1 &2093725169

@@ -7,14 +7,18 @@ using UnityEngine.UI;
 
 public class JoyStickShow : MonoBehaviour, IPointerDownHandler,IPointerUpHandler, IDragHandler{
     Image Joystick;
-    public Vector2 Offset;
+    public Vector2 Offset = new Vector2(0.7f,0.7f);
     private void Start()
     {
 
         Joystick = this.transform.GetChild(0).gameObject.GetComponent<Image>();
 
     }
+    private void Update()
+    {
 
+        Debug.Log(Joystick.GetComponent<VirtualJoystick>().InputVector);
+    }
     public void OnPointerDown(PointerEventData eventData)
     {
         Joystick.GetComponent<VirtualJoystick>().Init();
@@ -35,7 +39,6 @@ public class JoyStickShow : MonoBehaviour, IPointerDownHandler,IPointerUpHandler
 
     public void OnDrag(PointerEventData eventData)
     {
-        eventData.position = eventData.position + Offset;
         Joystick.GetComponent<VirtualJoystick>().OnDrag(eventData);
     }
 }

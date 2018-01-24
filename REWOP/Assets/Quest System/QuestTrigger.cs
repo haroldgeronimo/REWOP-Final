@@ -7,9 +7,9 @@ public class QuestTrigger : MonoBehaviour {
     public int questNumber;
     public bool IsStartQuest;
     public bool startWithoutInteract = false;
- 
-	// Use this for initialization
-	void Start () {
+
+    // Use this for initialization
+    void Start () {
         QM = QuestManager.instance;
         if (QM == null)
         {

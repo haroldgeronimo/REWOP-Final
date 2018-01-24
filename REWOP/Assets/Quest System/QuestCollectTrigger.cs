@@ -9,7 +9,7 @@ public class QuestCollectTrigger : MonoBehaviour {
     private QuestManager QM;
     public QuestObject QO;
     public QuestTrigger EndQT;
-    
+    public bool CollectWithoutInteract;
     private void Start()
     {
         QM = QuestManager.instance;
@@ -20,45 +20,23 @@ public class QuestCollectTrigger : MonoBehaviour {
 
     }
 
-    void Update () {
-        
-  
 
-	}
-    private void OnTriggerEnter(Collider other)
-    {
-        if(other.gameObject.tag == "Player" )
-        CollectTrigger();
-    }
 
     public void CollectTrigger() {
-
+        Debug.Log("Collecting trigger");
+        Debug.Log("Checking " + (!QM.questCompleted[questNumber]) + " and " + QM.activeQuest + " = " + questNumber);
             if (!QM.questCompleted[questNumber] && QM.activeQuest == questNumber)
-            {
+        {
+            Debug.Log("Collecting updating collection");
 
-                gameObject.SetActive(false);
+            gameObject.SetActive(false);
                 QO.currentCount += 1;
                 if (QO.CollectionComplete() && !QO.EndInstant)
                 {
-
-                    EndQT.gameObject.SetActive(true);
+                Debug.Log("Disabling end trigger");
+                EndQT.gameObject.SetActive(true);
                 }
             }
-    
-    }
-    public void DestroyedTrigger() {
-        if (!QM.questCompleted[questNumber] && QM.activeQuest == questNumber)
-        {
-
-            QO.currentCount += 1;
-            if (QO.CollectionComplete() && !QO.EndInstant)
-            {
-
-                EndQT.gameObject.SetActive(true);
-            }
-        }
-
-
 
     }
 }

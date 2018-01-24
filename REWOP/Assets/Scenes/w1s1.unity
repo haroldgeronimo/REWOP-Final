@@ -339,6 +339,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questNumber: 5
   IsStartQuest: 1
+  startWithoutInteract: 1
 --- !u!65 &62860064
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -363,8 +364,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsQuestTrigger: 1
+  IsQuestCollectTrigger: 0
   IsEvent: 0
   OneTimeEvent: 0
+  IsBagTrigger: 0
   eventToInvoke:
     m_PersistentCalls:
       m_Calls: []
@@ -406,9 +409,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemTag: enemy
-  questNumber: 1
+  questNumber: 2
   QO: {fileID: 18156074}
   EndQT: {fileID: 0}
+  CollectWithoutInteract: 1
+--- !u!114 &80123272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 80123268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 137b90c7a50c24649a92261fc37d7898, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsQuestTrigger: 0
+  IsQuestCollectTrigger: 1
+  IsEvent: 0
+  OneTimeEvent: 0
+  IsBagTrigger: 0
+  eventToInvoke:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  defaultDialogue:
+    name: 
+    sentences: []
 --- !u!1 &134135269
 GameObject:
   m_ObjectHideFlags: 0
@@ -797,6 +825,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questNumber: 2
   IsStartQuest: 1
+  startWithoutInteract: 1
 --- !u!65 &189896865
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -850,8 +879,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsQuestTrigger: 1
+  IsQuestCollectTrigger: 0
   IsEvent: 0
   OneTimeEvent: 0
+  IsBagTrigger: 0
   eventToInvoke:
     m_PersistentCalls:
       m_Calls: []
@@ -1057,6 +1088,30 @@ Transform:
   m_PrefabParentObject: {fileID: 4038250761301430, guid: fa0147c97a3c0824a83694a069fd192c,
     type: 2}
   m_PrefabInternal: {fileID: 1321746199}
+--- !u!114 &290247394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 290247392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 137b90c7a50c24649a92261fc37d7898, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsQuestTrigger: 0
+  IsQuestCollectTrigger: 1
+  IsEvent: 0
+  OneTimeEvent: 0
+  IsBagTrigger: 0
+  eventToInvoke:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  defaultDialogue:
+    name: 
+    sentences: []
 --- !u!114 &290247402
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1069,9 +1124,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemTag: enemy
-  questNumber: 1
+  questNumber: 2
   QO: {fileID: 18156074}
   EndQT: {fileID: 0}
+  CollectWithoutInteract: 1
 --- !u!114 &290247403
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1246,6 +1302,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questNumber: 3
   IsStartQuest: 1
+  startWithoutInteract: 0
 --- !u!65 &422039329
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1270,8 +1327,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsQuestTrigger: 1
+  IsQuestCollectTrigger: 0
   IsEvent: 0
   OneTimeEvent: 0
+  IsBagTrigger: 0
   eventToInvoke:
     m_PersistentCalls:
       m_Calls: []
@@ -1290,6 +1349,30 @@ Transform:
   m_PrefabParentObject: {fileID: 4038250761301430, guid: fa0147c97a3c0824a83694a069fd192c,
     type: 2}
   m_PrefabInternal: {fileID: 1110809794}
+--- !u!114 &422267056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 422267054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 137b90c7a50c24649a92261fc37d7898, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsQuestTrigger: 0
+  IsQuestCollectTrigger: 1
+  IsEvent: 0
+  OneTimeEvent: 0
+  IsBagTrigger: 0
+  eventToInvoke:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  defaultDialogue:
+    name: 
+    sentences: []
 --- !u!114 &422267064
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1302,9 +1385,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemTag: enemy
-  questNumber: 1
+  questNumber: 2
   QO: {fileID: 18156074}
   EndQT: {fileID: 0}
+  CollectWithoutInteract: 1
 --- !u!114 &422267065
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1653,9 +1737,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemTag: enemy
-  questNumber: 1
+  questNumber: 2
   QO: {fileID: 18156074}
   EndQT: {fileID: 0}
+  CollectWithoutInteract: 1
+--- !u!114 &494710566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 494710562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 137b90c7a50c24649a92261fc37d7898, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsQuestTrigger: 0
+  IsQuestCollectTrigger: 1
+  IsEvent: 0
+  OneTimeEvent: 0
+  IsBagTrigger: 0
+  eventToInvoke:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  defaultDialogue:
+    name: 
+    sentences: []
 --- !u!1001 &544565632
 Prefab:
   m_ObjectHideFlags: 0
@@ -1819,6 +1928,30 @@ Transform:
   m_PrefabParentObject: {fileID: 4038250761301430, guid: fa0147c97a3c0824a83694a069fd192c,
     type: 2}
   m_PrefabInternal: {fileID: 544565632}
+--- !u!114 &703168831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 703168829}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 137b90c7a50c24649a92261fc37d7898, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsQuestTrigger: 0
+  IsQuestCollectTrigger: 1
+  IsEvent: 0
+  OneTimeEvent: 0
+  IsBagTrigger: 0
+  eventToInvoke:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  defaultDialogue:
+    name: 
+    sentences: []
 --- !u!114 &703168839
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1831,9 +1964,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemTag: enemy
-  questNumber: 1
+  questNumber: 2
   QO: {fileID: 18156074}
   EndQT: {fileID: 0}
+  CollectWithoutInteract: 1
 --- !u!114 &703168840
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1876,6 +2010,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questNumber: 1
   IsStartQuest: 0
+  startWithoutInteract: 0
 --- !u!65 &720266643
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1913,8 +2048,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsQuestTrigger: 1
+  IsQuestCollectTrigger: 0
   IsEvent: 0
   OneTimeEvent: 0
+  IsBagTrigger: 0
   eventToInvoke:
     m_PersistentCalls:
       m_Calls: []
@@ -2015,6 +2152,30 @@ Transform:
   m_PrefabParentObject: {fileID: 4038250761301430, guid: fa0147c97a3c0824a83694a069fd192c,
     type: 2}
   m_PrefabInternal: {fileID: 248710621}
+--- !u!114 &864418942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 864418940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 137b90c7a50c24649a92261fc37d7898, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsQuestTrigger: 0
+  IsQuestCollectTrigger: 1
+  IsEvent: 0
+  OneTimeEvent: 0
+  IsBagTrigger: 0
+  eventToInvoke:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  defaultDialogue:
+    name: 
+    sentences: []
 --- !u!114 &864418950
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2027,9 +2188,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemTag: enemy
-  questNumber: 1
+  questNumber: 2
   QO: {fileID: 18156074}
   EndQT: {fileID: 0}
+  CollectWithoutInteract: 1
 --- !u!114 &864418951
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2293,6 +2455,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questNumber: 4
   IsStartQuest: 0
+  startWithoutInteract: 0
 --- !u!65 &974169426
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2317,8 +2480,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsQuestTrigger: 1
+  IsQuestCollectTrigger: 0
   IsEvent: 0
   OneTimeEvent: 0
+  IsBagTrigger: 0
   eventToInvoke:
     m_PersistentCalls:
       m_Calls: []
@@ -2540,6 +2705,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questNumber: 1
   IsStartQuest: 1
+  startWithoutInteract: 0
 --- !u!65 &1026714098
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2577,8 +2743,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsQuestTrigger: 1
+  IsQuestCollectTrigger: 0
   IsEvent: 0
   OneTimeEvent: 0
+  IsBagTrigger: 0
   eventToInvoke:
     m_PersistentCalls:
       m_Calls: []
@@ -3802,6 +3970,30 @@ Transform:
   m_PrefabParentObject: {fileID: 4038250761301430, guid: fa0147c97a3c0824a83694a069fd192c,
     type: 2}
   m_PrefabInternal: {fileID: 2145450106}
+--- !u!114 &1664164023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1664164021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 137b90c7a50c24649a92261fc37d7898, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsQuestTrigger: 0
+  IsQuestCollectTrigger: 1
+  IsEvent: 0
+  OneTimeEvent: 0
+  IsBagTrigger: 0
+  eventToInvoke:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  defaultDialogue:
+    name: 
+    sentences: []
 --- !u!114 &1664164031
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3814,9 +4006,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemTag: enemy
-  questNumber: 1
+  questNumber: 2
   QO: {fileID: 18156074}
   EndQT: {fileID: 0}
+  CollectWithoutInteract: 1
 --- !u!114 &1664164032
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3965,6 +4158,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questNumber: 3
   IsStartQuest: 0
+  startWithoutInteract: 1
 --- !u!65 &1711907941
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3989,8 +4183,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsQuestTrigger: 1
+  IsQuestCollectTrigger: 0
   IsEvent: 0
   OneTimeEvent: 0
+  IsBagTrigger: 0
   eventToInvoke:
     m_PersistentCalls:
       m_Calls: []
@@ -4221,6 +4417,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questNumber: 4
   IsStartQuest: 1
+  startWithoutInteract: 0
 --- !u!65 &1778631816
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4245,8 +4442,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsQuestTrigger: 1
+  IsQuestCollectTrigger: 0
   IsEvent: 0
   OneTimeEvent: 0
+  IsBagTrigger: 0
   eventToInvoke:
     m_PersistentCalls:
       m_Calls: []
@@ -5085,6 +5284,7 @@ MonoBehaviour:
   questNumber: 4
   QO: {fileID: 917055704}
   EndQT: {fileID: 974169425}
+  CollectWithoutInteract: 0
 --- !u!114 &2045168334
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5115,9 +5315,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 137b90c7a50c24649a92261fc37d7898, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsQuestTrigger: 1
+  IsQuestTrigger: 0
+  IsQuestCollectTrigger: 1
   IsEvent: 0
   OneTimeEvent: 0
+  IsBagTrigger: 1
   eventToInvoke:
     m_PersistentCalls:
       m_Calls: []
@@ -5261,6 +5463,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questNumber: 5
   IsStartQuest: 0
+  startWithoutInteract: 1
 --- !u!65 &2090241058
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5317,8 +5520,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsQuestTrigger: 1
+  IsQuestCollectTrigger: 0
   IsEvent: 0
   OneTimeEvent: 0
+  IsBagTrigger: 0
   eventToInvoke:
     m_PersistentCalls:
       m_Calls: []

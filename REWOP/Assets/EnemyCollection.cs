@@ -11,6 +11,7 @@ public class EnemyCollection : MonoBehaviour {
 
     private void OnDestroy()
     {
-        QCT.DestroyedTrigger();
+        Debug.Log("enemy destroyed");
+        QCT.CollectTrigger();   
     }
 }

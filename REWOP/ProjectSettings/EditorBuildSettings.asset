@@ -17,10 +17,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/w1s1.unity
     guid: a8765df72f9f81f479aa755c49736e42
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/w1s1tos2.unity
     guid: 383b6811c70310949aff2588b1a7d76c
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/w1s2.unity
     guid: 13b2eb0f04744bd49842bdf7c95335f1
   - enabled: 0

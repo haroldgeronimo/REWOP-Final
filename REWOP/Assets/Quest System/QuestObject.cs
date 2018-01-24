@@ -66,6 +66,7 @@ public class QuestObject : MonoBehaviour {
         if (OnQuestStart != null)
             OnQuestStart();
         QM.ShowStartDialogue(startDialogue);
+        StartEvent.Invoke();
         if (IsCollection)
         {//initialize collection here
             //Debug.Log("Initializing Collectibles" + questNumber);
@@ -89,7 +90,7 @@ public class QuestObject : MonoBehaviour {
                 EndQuestTrigger.gameObject.SetActive(false);
             }
 
-            StartEvent.Invoke();
+           
         }
         else if (IsBoss)
         {

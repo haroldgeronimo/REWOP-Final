@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BagScript : MonoBehaviour {
     private QuestManager QM;
+    private QuestCollectTrigger QCT;
     public Dialogue inactiveDialog;
     public Dialogue activeDialog;
     private DialogueManager DM;
@@ -11,13 +12,13 @@ public class BagScript : MonoBehaviour {
     void Start () {
         QM = FindObjectOfType<QuestManager>();
         DM = FindObjectOfType<DialogueManager>();
+        QCT = GetComponent<QuestCollectTrigger>();
 	}
-    private void OnTriggerEnter(Collider other)
+      public void StartDialouge()
     {
-        if (other.name == "Player")
-            if (QM.activeQuest == 3)
-                DM.StartDialogue(activeDialog);
-            else
-                DM.StartDialogue(inactiveDialog);
+        if (QM.activeQuest == QCT.questNumber)
+            DM.StartDialogue(activeDialog);
+        else
+            DM.StartDialogue(inactiveDialog);
     }
 }

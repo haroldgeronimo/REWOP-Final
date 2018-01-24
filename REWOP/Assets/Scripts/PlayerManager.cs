@@ -28,7 +28,7 @@ public class PlayerManager : MonoBehaviour {
     }
 
     public GameObject player;
-
+    public GameObject controlTapToInteract;
     public void KillPlayer() {
 
         StartCoroutine(DeathDelay());

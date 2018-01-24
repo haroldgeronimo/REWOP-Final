@@ -305,6 +305,7 @@ GameObject:
   - component: {fileID: 62860062}
   - component: {fileID: 62860064}
   - component: {fileID: 62860063}
+  - component: {fileID: 62860065}
   m_Layer: 0
   m_Name: Quest4StartTrigger
   m_TagString: Untagged
@@ -350,6 +351,28 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3.8331795, y: 2, z: 10.231804}
   m_Center: {x: -0.04785961, y: 0, z: 0.8015785}
+--- !u!114 &62860065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 62860061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 137b90c7a50c24649a92261fc37d7898, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsQuestTrigger: 1
+  IsEvent: 0
+  OneTimeEvent: 0
+  eventToInvoke:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  defaultDialogue:
+    name: 
+    sentences: []
 --- !u!1 &80123268 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1920742666849220, guid: fa0147c97a3c0824a83694a069fd192c,
@@ -740,6 +763,7 @@ GameObject:
   - component: {fileID: 189896864}
   - component: {fileID: 189896866}
   - component: {fileID: 189896867}
+  - component: {fileID: 189896868}
   m_Layer: 0
   m_Name: Quest1StartTrigger
   m_TagString: Untagged
@@ -814,6 +838,28 @@ MonoBehaviour:
   questNumber: 1
   Sword: {fileID: 0}
   Attack: {fileID: 0}
+--- !u!114 &189896868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 189896862}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 137b90c7a50c24649a92261fc37d7898, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsQuestTrigger: 1
+  IsEvent: 0
+  OneTimeEvent: 0
+  eventToInvoke:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  defaultDialogue:
+    name: 
+    sentences: []
 --- !u!1 &206624718
 GameObject:
   m_ObjectHideFlags: 0
@@ -1166,6 +1212,7 @@ GameObject:
   - component: {fileID: 422039327}
   - component: {fileID: 422039329}
   - component: {fileID: 422039328}
+  - component: {fileID: 422039330}
   m_Layer: 0
   m_Name: Quest2StartTrigger
   m_TagString: Untagged
@@ -1211,6 +1258,28 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2, y: 2, z: 2}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &422039330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 422039326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 137b90c7a50c24649a92261fc37d7898, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsQuestTrigger: 1
+  IsEvent: 0
+  OneTimeEvent: 0
+  eventToInvoke:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  defaultDialogue:
+    name: 
+    sentences: []
 --- !u!1 &422267054 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1920742666849220, guid: fa0147c97a3c0824a83694a069fd192c,
@@ -1786,6 +1855,7 @@ GameObject:
   - component: {fileID: 720266644}
   - component: {fileID: 720266643}
   - component: {fileID: 720266642}
+  - component: {fileID: 720266645}
   m_Layer: 0
   m_Name: Quest0EndTriger
   m_TagString: Untagged
@@ -1831,6 +1901,28 @@ Transform:
   m_Father: {fileID: 1270478355}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &720266645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 720266641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 137b90c7a50c24649a92261fc37d7898, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsQuestTrigger: 1
+  IsEvent: 0
+  OneTimeEvent: 0
+  eventToInvoke:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  defaultDialogue:
+    name: 
+    sentences: []
 --- !u!1 &728309253
 GameObject:
   m_ObjectHideFlags: 0
@@ -2167,6 +2259,7 @@ GameObject:
   - component: {fileID: 974169424}
   - component: {fileID: 974169426}
   - component: {fileID: 974169425}
+  - component: {fileID: 974169427}
   m_Layer: 0
   m_Name: Quest3EndTrigger
   m_TagString: Untagged
@@ -2212,6 +2305,28 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.8504525, y: 2, z: 2}
   m_Center: {x: 0.32313877, y: -2.220446e-16, z: 0}
+--- !u!114 &974169427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 974169423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 137b90c7a50c24649a92261fc37d7898, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsQuestTrigger: 1
+  IsEvent: 0
+  OneTimeEvent: 0
+  eventToInvoke:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  defaultDialogue:
+    name: 
+    sentences: []
 --- !u!95 &983801153 stripped
 Animator:
   m_PrefabParentObject: {fileID: 95496770173016122, guid: 3a8a06ec3f78b3f48a2b0755e801264b,
@@ -2404,6 +2519,7 @@ GameObject:
   - component: {fileID: 1026714099}
   - component: {fileID: 1026714098}
   - component: {fileID: 1026714097}
+  - component: {fileID: 1026714100}
   m_Layer: 0
   m_Name: Quest0StartTrigger
   m_TagString: Untagged
@@ -2449,6 +2565,28 @@ Transform:
   m_Father: {fileID: 1270478355}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1026714100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1026714096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 137b90c7a50c24649a92261fc37d7898, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsQuestTrigger: 1
+  IsEvent: 0
+  OneTimeEvent: 0
+  eventToInvoke:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  defaultDialogue:
+    name: 
+    sentences: []
 --- !u!1 &1027735619
 GameObject:
   m_ObjectHideFlags: 0
@@ -3793,6 +3931,7 @@ GameObject:
   - component: {fileID: 1711907939}
   - component: {fileID: 1711907941}
   - component: {fileID: 1711907940}
+  - component: {fileID: 1711907942}
   m_Layer: 0
   m_Name: Quest2EndTrigger
   m_TagString: Untagged
@@ -3838,6 +3977,28 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 7.132688, y: 2, z: 9.571202}
   m_Center: {x: 0.55252355, y: -2.497447e-16, z: 9.61837}
+--- !u!114 &1711907942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1711907938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 137b90c7a50c24649a92261fc37d7898, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsQuestTrigger: 1
+  IsEvent: 0
+  OneTimeEvent: 0
+  eventToInvoke:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  defaultDialogue:
+    name: 
+    sentences: []
 --- !u!1 &1733850021
 GameObject:
   m_ObjectHideFlags: 0
@@ -4026,6 +4187,7 @@ GameObject:
   - component: {fileID: 1778631814}
   - component: {fileID: 1778631816}
   - component: {fileID: 1778631815}
+  - component: {fileID: 1778631817}
   m_Layer: 0
   m_Name: Quest3StartTrigger
   m_TagString: Untagged
@@ -4071,6 +4233,28 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2, y: 2, z: 2}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1778631817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1778631813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 137b90c7a50c24649a92261fc37d7898, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsQuestTrigger: 1
+  IsEvent: 0
+  OneTimeEvent: 0
+  eventToInvoke:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  defaultDialogue:
+    name: 
+    sentences: []
 --- !u!1001 &1782399879
 Prefab:
   m_ObjectHideFlags: 0
@@ -4813,6 +4997,7 @@ GameObject:
   - component: {fileID: 2045168330}
   - component: {fileID: 2045168333}
   - component: {fileID: 2045168334}
+  - component: {fileID: 2045168335}
   m_Layer: 0
   m_Name: Quest3ItemTrigger
   m_TagString: Untagged
@@ -4919,6 +5104,28 @@ MonoBehaviour:
     name: Nexo
     sentences:
     - This must be the General's bag. I'll take it.
+--- !u!114 &2045168335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2045168328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 137b90c7a50c24649a92261fc37d7898, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsQuestTrigger: 1
+  IsEvent: 0
+  OneTimeEvent: 0
+  eventToInvoke:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  defaultDialogue:
+    name: 
+    sentences: []
 --- !u!1 &2065901841
 GameObject:
   m_ObjectHideFlags: 0
@@ -5020,6 +5227,7 @@ GameObject:
   - component: {fileID: 2090241057}
   - component: {fileID: 2090241060}
   - component: {fileID: 2090241059}
+  - component: {fileID: 2090241061}
   m_Layer: 0
   m_Name: Quest4EndTriger
   m_TagString: Untagged
@@ -5097,6 +5305,28 @@ MonoBehaviour:
   questNumber: 5
   ParamName: Open
   State: 1
+--- !u!114 &2090241061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2090241055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 137b90c7a50c24649a92261fc37d7898, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsQuestTrigger: 1
+  IsEvent: 0
+  OneTimeEvent: 0
+  eventToInvoke:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  defaultDialogue:
+    name: 
+    sentences: []
 --- !u!1 &2093725169
 GameObject:
   m_ObjectHideFlags: 0

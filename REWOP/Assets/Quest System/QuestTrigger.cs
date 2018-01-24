@@ -6,7 +6,7 @@ public class QuestTrigger : MonoBehaviour {
    private QuestManager QM;
     public int questNumber;
     public bool IsStartQuest;
-    
+    public bool startWithoutInteract = false;
  
 	// Use this for initialization
 	void Start () {
@@ -22,20 +22,27 @@ public class QuestTrigger : MonoBehaviour {
 	void OnTriggerEnter(Collider other){
         if (other.gameObject.tag == "Player")
         {
-            Debug.Log("Player has entered a trigger");
-            if (!QM.questCompleted[questNumber])
-            {
-                Debug.Log("Triggered quest is not yet completed");
-                if (IsStartQuest && !QM.quests[questNumber].gameObject.activeSelf)//
-                {
-                    StartQuest();
+            if(startWithoutInteract){
+                TriggerQuest();
                 }
-               else if (!IsStartQuest && QM.quests[questNumber].gameObject.activeSelf) {
-                    EndQuest();
-                }
-            }
         }
 	}
+   public void TriggerQuest()
+    {
+        Debug.Log("Player has entered a trigger");
+        if (!QM.questCompleted[questNumber])
+        {
+            Debug.Log("Triggered quest is not yet completed");
+            if (IsStartQuest && !QM.quests[questNumber].gameObject.activeSelf)//
+            {
+                StartQuest();
+            }
+            else if (!IsStartQuest && QM.quests[questNumber].gameObject.activeSelf)
+            {
+                EndQuest();
+            }
+        }
+    }
 
     void StartQuest() {
         if (checkChronologicalQuest())
@@ -49,7 +56,7 @@ public class QuestTrigger : MonoBehaviour {
         QM.activeQuest = -1;
         QM.quests[questNumber].EndQuest();
     }
-    private bool checkChronologicalQuest() {
+    public bool checkChronologicalQuest() {
         bool check = true;
         if (questNumber == 0) return true;
 

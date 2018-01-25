@@ -15,7 +15,6 @@ public class VirtualJoystick : MonoBehaviour, IDragHandler, IPointerUpHandler, I
     {
         Init();
     }
-
     public virtual void OnDrag(PointerEventData ped)
     {
         Vector2 pos;
@@ -26,13 +25,16 @@ public class VirtualJoystick : MonoBehaviour, IDragHandler, IPointerUpHandler, I
             float y;
             if (IsStatic)
             {
+                Debug.Log("IsStatic");
                 x = (bgImg.rectTransform.pivot.x == 1) ? pos.x * 2 : pos.x * 2;
                 y = (bgImg.rectTransform.pivot.y == 1) ? pos.y * 2 : pos.y * 2;
             }
             else
             {
-                x = (bgImg.rectTransform.pivot.x == 1) ? pos.x * 2 : pos.x * 2+1;
-                y = (bgImg.rectTransform.pivot.y == 1) ? pos.y * 2 : pos.y * 2+1;
+                Debug.Log("IsNotStatic");
+                x = (bgImg.rectTransform.pivot.x == 1) ? pos.x * 2 +1 : pos.x * 2 -1;
+                y = (bgImg.rectTransform.pivot.y == 1) ? pos.y * 2 + 1 : pos.y *2 -1;
+                Debug.Log(x + "," + y);
             }
           
 

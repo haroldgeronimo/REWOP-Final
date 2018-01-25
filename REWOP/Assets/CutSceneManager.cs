@@ -7,7 +7,7 @@ public class CutSceneManager : MonoBehaviour {
    public Camera mainCamera;
     public CutsceneObject[] cutSceneObject;
     public bool[] sceneCompleted;
-
+    public int ActiveCutScene = -1;
     // Use this for initialization
     private void Awake()
     {

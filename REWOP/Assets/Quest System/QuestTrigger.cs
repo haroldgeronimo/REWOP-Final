@@ -44,7 +44,7 @@ public class QuestTrigger : MonoBehaviour {
         }
     }
 
-    void StartQuest() {
+    public void StartQuest() {
         if (checkChronologicalQuest())
         {
             QM.activeQuest = questNumber;

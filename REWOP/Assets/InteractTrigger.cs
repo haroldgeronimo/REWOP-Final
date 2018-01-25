@@ -33,20 +33,40 @@ public class InteractTrigger : MonoBehaviour {
         {
             //checks if this is the current quest
             if (IsQuestTrigger)
-                if (!qt.checkChronologicalQuest())
+            {
+                Debug.Log("Is quest trigger!");
+                if (!qt.checkChronologicalQuest() )//|| ((!qt.IsStartQuest) && QuestManager.instance.activeQuest == qt.questNumber))
                 {
+                    if (!qt.IsStartQuest && QuestManager.instance.activeQuest != qt.questNumber) return;
+                    Debug.Log("Is but not a quest done!");
                     //checked if it is automatic trigger
                     if (qt.startWithoutInteract)
                     {
+                        Debug.Log("Is start without interact");
                         qt.TriggerQuest();
                     }
 
                     return;
                 }
-                else if (IsQuestCollectTrigger && qct.questNumber == QuestManager.instance.activeQuest && qct.CollectWithoutInteract) {
+
+                if (IsQuestCollectTrigger && qct.questNumber == QuestManager.instance.activeQuest && qct.CollectWithoutInteract)
+                {// if it its a collection object
+                    Debug.Log("Is Collection object");
                     qct.CollectTrigger();
-                               return;
+                    return;
                 }
+                Debug.Log("Checking if " + QuestManager.instance.activeQuest + " = " + qt.questNumber);
+                if (QuestManager.instance.questCompleted[qt.questNumber] || (QuestManager.instance.activeQuest == qt.questNumber && qt.IsStartQuest))
+                {
+
+                    return;
+                }
+
+
+
+                //    if (defaultDialogue.sentences.Length == 0) return;
+            }
+            Debug.Log("Opening the button");
             OpenButtonUI();
           
            
@@ -69,7 +89,7 @@ public class InteractTrigger : MonoBehaviour {
 
         if (IsQuestTrigger)
         {//resets the interaction
-            //IsQuestTrigger = false;
+           // IsQuestTrigger = false;
             qt.TriggerQuest(); 
         }else if (IsQuestCollectTrigger)
         {

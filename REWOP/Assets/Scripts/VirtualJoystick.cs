@@ -8,6 +8,7 @@ public class VirtualJoystick : MonoBehaviour, IDragHandler, IPointerUpHandler, I
 
     private Image bgImg;
     private Image joystickImg;
+    public bool IsStatic = false;
     public Vector3 InputVector { set; get; }
 
     private void Start()
@@ -21,10 +22,19 @@ public class VirtualJoystick : MonoBehaviour, IDragHandler, IPointerUpHandler, I
         if (RectTransformUtility.ScreenPointToLocalPointInRectangle(bgImg.rectTransform, ped.position, ped.pressEventCamera, out pos)) {
             pos.x = (pos.x/bgImg.rectTransform.sizeDelta.x);
             pos.y = (pos.y/bgImg.rectTransform.sizeDelta.y);
-
-             
-            float x = (bgImg.rectTransform.pivot.x == 1) ? pos.x * 2 : pos.x * 2 ;
-            float y = (bgImg.rectTransform.pivot.y == 1) ? pos.y * 2 : pos.y * 2;
+            float x;
+            float y;
+            if (IsStatic)
+            {
+                x = (bgImg.rectTransform.pivot.x == 1) ? pos.x * 2 : pos.x * 2;
+                y = (bgImg.rectTransform.pivot.y == 1) ? pos.y * 2 : pos.y * 2;
+            }
+            else
+            {
+                x = (bgImg.rectTransform.pivot.x == 1) ? pos.x * 2 : pos.x * 2+1;
+                y = (bgImg.rectTransform.pivot.y == 1) ? pos.y * 2 : pos.y * 2+1;
+            }
+          
 
             InputVector = new Vector3(x,0,y);
           //  InputVector = new Vector3(pos.x * 2 + 1, 0, pos.y * 2 - 1);

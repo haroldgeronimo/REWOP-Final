@@ -17,7 +17,7 @@ public class JoyStickShow : MonoBehaviour, IPointerDownHandler,IPointerUpHandler
     private void Update()
     {
 
-        Debug.Log(Joystick.GetComponent<VirtualJoystick>().InputVector);
+        //Debug.Log(Joystick.GetComponent<VirtualJoystick>().InputVector);
     }
     public void OnPointerDown(PointerEventData eventData)
     {
@@ -39,6 +39,7 @@ public class JoyStickShow : MonoBehaviour, IPointerDownHandler,IPointerUpHandler
 
     public void OnDrag(PointerEventData eventData)
     {
+        Joystick.GetComponent<VirtualJoystick>().IsStatic = true;
         Joystick.GetComponent<VirtualJoystick>().OnDrag(eventData);
     }
 }

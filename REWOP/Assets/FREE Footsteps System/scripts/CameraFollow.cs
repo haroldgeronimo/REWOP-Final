@@ -6,7 +6,8 @@ namespace Footsteps {
 	public class CameraFollow : MonoBehaviour {
 
 Transform target;
- float followLerpFactor = 1f;
+public Vector3 offset;
+ public float followLerpFactor = 1f;
 
 		Transform thisTransform;
 
@@ -19,8 +20,8 @@ Transform target;
 			thisTransform = transform;
 		}
 
-		void FixedUpdate() {
-			thisTransform.position = Vector3.Lerp(thisTransform.position, target.position, Time.deltaTime * followLerpFactor);
+		void Update() {
+			thisTransform.position = Vector3.Lerp(thisTransform.position, target.position + offset, followLerpFactor);
 		}
 	}
 }

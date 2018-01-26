@@ -7,11 +7,13 @@ public class QuestManager : MonoBehaviour {
     public bool[] questCompleted;
     private DialogueManager DM;
    public int activeQuest;
-   
+    [Space(3)]
+    public int World;
+    public int Stage;
     // Use this for initialization
     private void Awake()
     {
-
+        Debug.Log("Instantiating w:" + World + "s:" + Stage + "  quest maneyger");
         if (instance == null)
             instance = this;
     }

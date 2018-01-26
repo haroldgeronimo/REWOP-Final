@@ -31,6 +31,8 @@ public class InteractTrigger : MonoBehaviour {
     {
         if(other.gameObject == PlayerManager.instance.player)
         {
+            Debug.Log("Trigger for w:" + QuestManager.instance.World + "s:" + QuestManager.instance.Stage + " is inspected");
+
             //checks if this is the current quest
             if (IsQuestTrigger)
             {
@@ -49,11 +51,20 @@ public class InteractTrigger : MonoBehaviour {
                     return;
                 }
 
-                if (IsQuestCollectTrigger && qct.questNumber == QuestManager.instance.activeQuest && qct.CollectWithoutInteract)
+                if (IsQuestCollectTrigger)
                 {// if it its a collection object
-                    Debug.Log("Is Collection object");
-                    qct.CollectTrigger();
-                    return;
+                    Debug.Log(QuestManager.instance.activeQuest);
+     
+                    if (qct.questNumber == QuestManager.instance.activeQuest)
+                    {
+                        if (qct.CollectWithoutInteract)
+                        {
+                            Debug.Log("Is Collection object");
+                            qct.CollectTrigger();
+                            return;
+                        }
+                    }
+           
                 }
                 Debug.Log("Checking if " + QuestManager.instance.activeQuest + " = " + qt.questNumber);
                 if (QuestManager.instance.questCompleted[qt.questNumber] || (QuestManager.instance.activeQuest == qt.questNumber && qt.IsStartQuest))

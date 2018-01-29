@@ -24939,12 +24939,12 @@ Prefab:
     - target: {fileID: 224714353097665288, guid: d7440313eeb9b90409bd7f65b78d1e7a,
         type: 2}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224714353097665288, guid: d7440313eeb9b90409bd7f65b78d1e7a,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224714353097665288, guid: d7440313eeb9b90409bd7f65b78d1e7a,
         type: 2}
@@ -24980,32 +24980,32 @@ Prefab:
       propertyPath: m_text
       value: Ya ya ya ya! tuahaha OC Dawgs! ExB! hula! Kalimutan mo na yan Sigisigi
         maglibang wag magpakahibang dapat ay itawa lang ang problem niyo sa github
-        dapat di iniinda
+        dapat di iniinda hayaan mo sila ang maghabol sayo diba
       objectReference: {fileID: 0}
     - target: {fileID: 114716068411301286, guid: d7440313eeb9b90409bd7f65b78d1e7a,
         type: 2}
       propertyPath: m_fontSize
-      value: 18
+      value: 15.55
       objectReference: {fileID: 0}
     - target: {fileID: 114716068411301286, guid: d7440313eeb9b90409bd7f65b78d1e7a,
         type: 2}
       propertyPath: m_textInfo.characterCount
-      value: 162
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 114716068411301286, guid: d7440313eeb9b90409bd7f65b78d1e7a,
         type: 2}
       propertyPath: m_textInfo.lineCount
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 114716068411301286, guid: d7440313eeb9b90409bd7f65b78d1e7a,
         type: 2}
       propertyPath: m_textInfo.spaceCount
-      value: 28
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 114716068411301286, guid: d7440313eeb9b90409bd7f65b78d1e7a,
         type: 2}
       propertyPath: m_textInfo.wordCount
-      value: 29
+      value: 36
       objectReference: {fileID: 0}
     - target: {fileID: 114716068411301286, guid: d7440313eeb9b90409bd7f65b78d1e7a,
         type: 2}
@@ -25030,7 +25030,7 @@ Prefab:
     - target: {fileID: 224714353097665288, guid: d7440313eeb9b90409bd7f65b78d1e7a,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -75
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d7440313eeb9b90409bd7f65b78d1e7a, type: 2}

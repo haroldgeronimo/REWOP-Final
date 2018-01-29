@@ -45,6 +45,10 @@ public class EasySaveLoadManager : MonoBehaviour {
         return ES2.Exists(folder + path);
 
     }
+public void ResetGame()
+    {
+        ES2.Delete(folder);
+    }
 }
 
 #region staticGameObjects

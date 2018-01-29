@@ -13,8 +13,7 @@ public class CodeSimulator : MonoBehaviour
     public ActionStates playerCurrentAction;
     public Transform CodeCanvas;
 
-    [Space(5)]
-    [Header("Dependencies")]
+
     private List<ActionStates> EnemyActions;
     public int OverheadActionTreshold = 5;
     //private int PlayerPoints;
@@ -23,21 +22,18 @@ public class CodeSimulator : MonoBehaviour
     public static CodeSimulator CS;
     public CodeBlockManager CBM;
     public Countdown Timer;
-    [Space(5)]
-    [Header("States")]
+
     //States
     bool IsCompiling = false;
     bool IsSimulating = false;
-    [Space(5)]
-    [Header("Animators")]
+
     //Animators
     public Animator CodeblockUIAnimator;
     public Animator StopAnimator;
     public Animator PlayerScriptSim;
     public Animator EnemyScriptSim;
     public Animator ControlAnimator;
-    [Space(5)]
-    [Header("Pointers")]
+
     //Pointers
     public Transform PlayerPointerObject;
     public Transform EnemyPointerObject;
@@ -45,12 +41,10 @@ public class CodeSimulator : MonoBehaviour
     private Transform EnemyBlockPos;
     public Transform EnemyScriptCase;
     public Transform PlayerScriptCase;
-    [Space(5)]
-    [Header("Constraints")]
+
     //Constraints
     public CanvasGroup CodeCanvasCG;
-    [Space(5)]
-    [Header("Simulation")]
+
     //Simulation
     public FillPlayerActions fillPlayerActions;
     public FillEnemyActions fillEnemyActions;
@@ -58,17 +52,14 @@ public class CodeSimulator : MonoBehaviour
     public PlayerStats playerStats;
     public int combatDamage;
     public float damageDelay;
-    [Space(5)]
-    [Header("Modal")]
+
     //Modal
     private ModalDialogueSystem Modal;
-    [Space(5)]
-    [Header("REWOP classes")]
+
     //REWOP classes
     public QuestObject quest;
     public WinSummary WinSum;
-    [Space(5)]
-    [Header("GOALS")]
+
     //GOALS
     public int minimunBlock;
 

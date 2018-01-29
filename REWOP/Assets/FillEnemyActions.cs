@@ -6,7 +6,6 @@ using CodeBlocks;
 public class FillEnemyActions : MonoBehaviour {
     public ActionsScript ActSc;
      public GameObject functionBlock;
-     public GameObject[] actionBlocks;
     public bool IsDebug;
     public Sprite defaultSprite;
     public Sprite glitchedSprite;
@@ -27,12 +26,10 @@ public class FillEnemyActions : MonoBehaviour {
         }
         Color color;
 
-        GameObject actBlock = functionBlock;
+
         foreach (ActionHandler actionHandle in Actions)
         {
-            //  functionBlock.GetComponentInChildren<Text>().text = actionHandle.Action.ToString();
-            actBlock = new GameObject();
-            actBlock = functionBlock;
+            functionBlock.GetComponentInChildren<Text>().text = actionHandle.Action.ToString();
             bool IsSeen = actionHandle.IsSeen;
             if (!IsDebug)
             {
@@ -41,33 +38,31 @@ public class FillEnemyActions : MonoBehaviour {
 
             if (IsSeen)
             {
-                actBlock.GetComponent<Image>().sprite = defaultSprite;
+
+                functionBlock.GetComponent<Image>().sprite = defaultSprite;
                 if (actionHandle.Action.ToString() == "QUICK_ATTACK")
                 {
-                    actBlock = actionBlocks[0];
                     ColorUtility.TryParseHtmlString("#FF7A7AFF", out color);
-                    actBlock.GetComponent<Image>().color = color;
+                    functionBlock.GetComponent<Image>().color = color;
                 }
                 else if (actionHandle.Action.ToString() == "BLOCK")
                 {
-                    actBlock = actionBlocks[1];
-                    ColorUtility.TryParseHtmlString("#7ECFFFFF", out color);
-                    actBlock.GetComponent<Image>().color = color;
+                ColorUtility.TryParseHtmlString("#7ECFFFFF", out color);
+                    functionBlock.GetComponent<Image>().color = color;
                 }
                 else if (actionHandle.Action.ToString() == "SPELL")
                 {
-                    actBlock = actionBlocks[2];
                 ColorUtility.TryParseHtmlString("#EC6610FF", out color);
-                    actBlock.GetComponent<Image>().color = color;
+                    functionBlock.GetComponent<Image>().color = color;
                 }
 
             }
             else
             {
-                actBlock.GetComponent<Image>().color = Color.white;
-                actBlock.transform.GetChild(0).GetComponent<Text>().alignment = TextAnchor.MiddleCenter;
-                actBlock.transform.GetChild(0).GetComponent<Text>().text = "?";
-                actBlock.GetComponent<Image>().sprite = glitchedSprite;
+                functionBlock.GetComponent<Image>().color = Color.white;
+                functionBlock.transform.GetChild(0).GetComponent<Text>().alignment = TextAnchor.MiddleCenter;
+                functionBlock.transform.GetChild(0).GetComponent<Text>().text = "?";
+                functionBlock.GetComponent<Image>().sprite = glitchedSprite;
             }
 
             
@@ -75,10 +70,9 @@ public class FillEnemyActions : MonoBehaviour {
             {
                 Color col = new Color();
                 col.a = 0;
-                actBlock.GetComponent<Image>().color = col;
+                functionBlock.GetComponent<Image>().color = col;
             }
-
-            Instantiate(actBlock, this.transform);
+            Instantiate(functionBlock,this.transform);
         }
 
     }

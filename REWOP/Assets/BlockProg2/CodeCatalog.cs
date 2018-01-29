@@ -6,20 +6,19 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using CodeBlocks;
 //using UnityEditor;
-public class CodeCatalog : MonoBehaviour,IBeginDragHandler, IPointerDownHandler, IDragHandler, IEndDragHandler 
+public class CodeCatalog : MonoBehaviour,IBeginDragHandler, IPointerDownHandler, IDragHandler, IEndDragHandler ,IDropHandler
 {
-
     public GameObject codeprefab;
     public Transform CodeCanvas;
     public Transform BlockCodeUI;
     public GameObject placeholder;
-    public Sprite icon;
+
 
     public GameObject droppedFunction;
     public new string tag;
     private Vector2 scale;
     public ActionStates ActStat;
-   public GameObject codeblk;
+    GameObject codeblk;
 
     public Animator conditions;
     public Animator repeats;
@@ -30,26 +29,26 @@ public class CodeCatalog : MonoBehaviour,IBeginDragHandler, IPointerDownHandler,
 
     public void OnPointerDown(PointerEventData eventData)
     {
- 
-    }
-    public void OnBeginDrag(PointerEventData eventData)
-    {
-        if (Input.touchCount > 1)
-        {
-            OnEndDrag(eventData);
-            return;
-        }
-        InstantiateBlock();
-       
 
-        codeblk.GetComponent<CodeBlockDrag>().OnBeginDrag(eventData);
-        codeblk.GetComponent<CodeBlockDrag>().returnParent = CodeCanvas;
-        codeblk.transform.position = eventData.position;
-      //  codeblk.
-      //  Destroy(this);
- 
-    }
+            scale = CodeCanvas.GetComponent<RectTransform>().localScale;
+            codeblk = Instantiate(codeprefab, BlockCodeUI, false);
 
+        codeblk.tag = tag;
+        codeblk.GetComponent<CodeBlockDrag>().CodeCanvas = CodeCanvas;
+            codeblk.GetComponent<CodeBlockDrag>().placeholderParent = CodeCanvas;
+            codeblk.GetComponent<CodeBlockDrag>().CodeBuilder = BlockCodeUI;
+            codeblk.GetComponent<CodeBlockDrag>().placeholder = placeholder;
+            codeblk.GetComponent<CodeBlockDrag>().returnParent = CodeCanvas;
+            codeblk.GetComponent<RectTransform>().localScale = scale;
+            codeblk.GetComponent<Image>().color = this.GetComponent<Image>().color;
+            if (tag == "codeblock")
+            {
+                codeblk.GetComponentInChildren<Text>().text = GetComponentInChildren<Text>().text;
+                codeblk.GetComponent<CodeBlockMeta>().act = selectedAct(GetComponentInChildren<Text>().text);
+            }
+           
+    
+    }
 
     public void OnDrag(PointerEventData eventData)
     {
@@ -60,50 +59,40 @@ public class CodeCatalog : MonoBehaviour,IBeginDragHandler, IPointerDownHandler,
             return;
         }
         //
-    
-       
-
-       codeblk.GetComponent<CodeBlockDrag>().OnDrag(eventData);
-       
-
-
+        //codeblk.transform.position = eventData.position;
+        codeblk.GetComponent<CodeBlockDrag>().OnDrag(eventData);
    
     }
 
+    public void OnDrop(PointerEventData eventData)
+    {
+
+    }
+    private void Rules(GameObject dropped)
+    {
+        Debug.Log("rules");
+        droppedFunction = dropped;
+        if (tag == "repeat")
+        {
+            repeats.SetBool("IsOpen", true);
+            DropHandlerRepeat.droppedContent = droppedFunction;
+        }
+
+        if (tag == "decision")
+        {
+            conditions.SetBool("IsOpen", true);
+            DropHandlerDecision.droppedContent = droppedFunction;
+        }
+    }
 
     public void OnEndDrag(PointerEventData eventData)
     {
 
         codeblk.GetComponent<CodeBlockDrag>().OnEndDrag(eventData);
-        //     codeblk.transform.SetParent(CodeCanvas);
-        StopCoroutine(OpenRules());
-        StartCoroutine(OpenRules());
+        codeblk.transform.SetParent(CodeCanvas);
+            Rules(codeblk);
        
     }
-
-    public void InstantiateBlock()
-    {
-        scale = CodeCanvas.GetComponent<RectTransform>().localScale;
-        codeblk = Instantiate(codeprefab, BlockCodeUI, false);
-
-        codeblk.tag = tag;
-        codeblk.GetComponent<CodeBlockDrag>().CodeCanvas = CodeCanvas;
-        codeblk.GetComponent<CodeBlockDrag>().placeholderParent = CodeCanvas;
-        codeblk.GetComponent<CodeBlockDrag>().CodeBuilder = BlockCodeUI;
-        codeblk.GetComponent<CodeBlockDrag>().placeholder = placeholder;
-        codeblk.GetComponent<CodeBlockDrag>().returnParent = CodeCanvas;
-        codeblk.GetComponentInChildren<BlockIcon>().GetComponent<Image>().sprite = icon;
-        codeblk.GetComponent<RectTransform>().localScale = scale;
-        codeblk.GetComponent<Image>().color = this.GetComponent<Image>().color;
-        if (tag == "codeblock")
-        {
-            codeblk.GetComponentInChildren<Text>().text = GetComponentInChildren<Text>().text;
-            codeblk.GetComponent<CodeBlockMeta>().act = selectedAct(GetComponentInChildren<Text>().text);
-        }
-
-    }
-
-
     public ActionStates selectedAct(string text)
     {
         ActionStates actas;
@@ -117,34 +106,17 @@ public class CodeCatalog : MonoBehaviour,IBeginDragHandler, IPointerDownHandler,
         return actas;
     }
 
-    private void Rules(GameObject dropped)
+    public void OnBeginDrag(PointerEventData eventData)
     {
-        droppedFunction = dropped;
-        Debug.Log("rules");
-
-
-        if (droppedFunction == null) { return; }
-
-        if (tag == "repeat")
+        if (Input.touchCount > 1)
         {
-            repeats.SetBool("IsOpen", true);
-            DropHandlerRepeat.droppedContent = droppedFunction;
+            OnEndDrag(eventData);
+            return;
         }
 
-        if (tag == "decision")
-        {
-            conditions.SetBool("IsOpen", true);
-            DropHandlerDecision.droppedContent = droppedFunction;
-        }
-
+        
+        codeblk.GetComponent<CodeBlockDrag>().OnBeginDrag(eventData);
+        codeblk.GetComponent<CodeBlockDrag>().returnParent = CodeCanvas;
     }
-
-    IEnumerator OpenRules()
-    {
-        yield return new WaitForEndOfFrame();
-        if(codeblk!= null)
-        Rules(codeblk);
-    }
-  
 }
 

@@ -24,7 +24,6 @@ TagManager:
   - decision
   - maincanvas
   - QuestTitle
-  - codeblockHolder
   layers:
   - Default
   - TransparentFX

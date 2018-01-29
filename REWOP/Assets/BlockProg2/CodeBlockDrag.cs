@@ -19,8 +19,6 @@ public class CodeBlockDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
             OnEndDrag(eventData);
             return;
         }
-
-        Debug.Log("begins Dragging an object");
         placeholder.transform.SetSiblingIndex(this.transform.GetSiblingIndex());
         //SiblingI = this.transform.GetSiblingIndex();
         returnParent = this.transform.parent;

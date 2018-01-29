@@ -8,6 +8,8 @@ public class FillPlayerActions : MonoBehaviour {
     public CodeBlockManager ActSc;
     private List<ActionStates> Actions;
     public GameObject functionBlock;
+    public GameObject[] actionBlocks;
+    public Sprite defaultSprite;
     public void FillOutCanvas()
     {
         foreach (Transform child in transform)
@@ -16,31 +18,41 @@ public class FillPlayerActions : MonoBehaviour {
         }
         Actions = ActSc.PlayerActions;
         Color color;
+        GameObject actBlock = functionBlock;
+        actBlock.GetComponent<Image>().sprite = defaultSprite;
         foreach (ActionStates action in Actions)
         {
-            functionBlock.GetComponentInChildren<Text>().text = action.ToString();
+            //functionBlock.GetComponentInChildren<Text>().text = action.ToString();
+            actBlock = functionBlock;
+            actBlock.GetComponent<Image>().sprite = defaultSprite;
             if (action.ToString() == "QUICK_ATTACK")
             {
+                actBlock = actionBlocks[0];
                 ColorUtility.TryParseHtmlString("#FF7A7AFF", out color);
-                functionBlock.GetComponent<Image>().color = color;
+                actBlock.GetComponent<Image>().color = color;
             }
             else if (action.ToString() == "BLOCK")
             {
+                actBlock = actionBlocks[1];
                 ColorUtility.TryParseHtmlString("#7ECFFFFF", out color);
-                functionBlock.GetComponent<Image>().color = color;
+                actBlock.GetComponent<Image>().color = color;
             }
             else if (action.ToString() == "SPELL")
             {
+                actBlock = actionBlocks[2];
                 ColorUtility.TryParseHtmlString("#EC6610FF", out color);
-                functionBlock.GetComponent<Image>().color = color;
+                actBlock.GetComponent<Image>().color = color;
             }
             else if (action.ToString() == "IDLE")
             {
                 Color col = new Color();
                 col.a = 0;
-                functionBlock.GetComponent<Image>().color = col;
+                actBlock = functionBlock;
+                actBlock.GetComponent<Image>().color = col;
+                actBlock.GetComponentInChildren<Text>().text = "Idle";
+
             }
-            Instantiate(functionBlock, this.transform);
+            Instantiate(actBlock, this.transform);
         }
 
     }

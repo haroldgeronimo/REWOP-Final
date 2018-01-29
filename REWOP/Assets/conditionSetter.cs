@@ -46,4 +46,13 @@ public class conditionSetter : MonoBehaviour, IPointerDownHandler
         dropped.GetComponent<CodeBlockMeta>().SetCondition(con);
         conditions.SetBool("IsOpen", false);
     }
+    public void DestroyDropped()
+    {
+        GameObject go = getDropped();
+        if (go.transform.parent.tag == "content" && go.transform.parent.childCount == 2)
+            go.transform.parent.GetComponent<ContentDrop>().PlaceholdersetActive();
+        Destroy(go);
+        conditions.SetBool("IsOpen", false);
+        repeats.SetBool("IsOpen", false);
+    }
 }

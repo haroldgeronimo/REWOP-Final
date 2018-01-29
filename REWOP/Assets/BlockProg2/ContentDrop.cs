@@ -13,6 +13,7 @@ public class ContentDrop : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     public Vector2 phDefaultSize;
     private bool NormalState = true;
 
+    public GameObject draggedObject;
     private void Start()
     {
         placeholder = this.transform.GetChild(0).gameObject;
@@ -23,40 +24,56 @@ public class ContentDrop : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         if (eventData.pointerDrag == null) { Debug.Log("null pointer drag"); return; }
         if (eventData.pointerDrag.gameObject.tag != "decision"
         && eventData.pointerDrag.gameObject.tag != "repeat"
-        && eventData.pointerDrag.gameObject.tag != "codeblock") { Debug.Log("Incorrect tag: " + eventData.pointerDrag.gameObject.tag); return; }
+        && eventData.pointerDrag.gameObject.tag != "codeblock"
+        && eventData.pointerDrag.tag != "codeblockHolder") { Debug.Log("Incorrect tag: " + eventData.pointerDrag.gameObject.tag); return; }
         if ((eventData.pointerDrag != null || eventData.pointerDrag.gameObject != this.gameObject) && eventData.pointerDrag.GetComponent<CodeBlockDrag>() != null)
         {
-            Debug.Log("codeblockdrag does not equal null"); 
-            CodeBlockDrag cbd = eventData.pointerDrag.GetComponent<CodeBlockDrag>();
-            if (cbd != null)
-                cbd.placeholderParent = this.transform;
+            Debug.Log("from canvas");
+            ContentToEnter(eventData.pointerDrag);
 
-            eventData.pointerDrag.GetComponent<CodeBlockDrag>().placeholder = placeholder;
-            contents.Clear();
-            contents = GetAllChild();
-            if (contents.Count > 1)
-            {
-                //Set placeholder to active
-                TogglePlaceholderActive(true, eventData.pointerDrag.GetComponent<RectTransform>().sizeDelta, phDefaultColor);
-                //set sibling index to nearest the mouse pointer
-                //--- here---//
-                //
-            }
-            else
-            {
-                //highlight and resize to fit
-                TogglePlaceholderActive(false, eventData.pointerDrag.GetComponent<RectTransform>().sizeDelta, phDefaultColor);
+            DisableLineagePlaceholder(eventData);
+        }
+        if ((eventData.pointerDrag != null || eventData.pointerDrag.gameObject != this.gameObject) && eventData.pointerDrag.tag == "codeblockHolder")
+        {
+            Debug.Log("from codecase");
+           draggedObject = eventData.pointerDrag.GetComponent<CodeCatalog>().codeblk;
+            ContentToEnter(draggedObject);
 
-            }
+            DisableLineagePlaceholder(eventData);
         }
     }
+    public void ContentToEnter(GameObject go)
+    {
+        Debug.Log("codeblockdrag does not equal null");
+        CodeBlockDrag cbd = go.GetComponent<CodeBlockDrag>();
+        if (cbd != null)
+            cbd.placeholderParent = this.transform;
 
+        go.GetComponent<CodeBlockDrag>().placeholder = placeholder;
+        contents.Clear();
+        contents = GetAllChild();
+        if (contents.Count > 1)
+        {
+            //Set placeholder to active
+            TogglePlaceholderActive(true, go.GetComponent<RectTransform>().sizeDelta, phDefaultColor);
+            //set sibling index to nearest the mouse pointer
+            //--- here---//
+            //
+        }
+        else
+        {
+            //highlight and resize to fit
+            TogglePlaceholderActive(false, go.GetComponent<RectTransform>().sizeDelta, phDefaultColor);
+
+        }
+    }
     public void OnPointerExit(PointerEventData eventData)
     {
         if (eventData.pointerDrag == null) return;
-        if ((eventData.pointerDrag != null || eventData.pointerDrag.gameObject != this.gameObject) && eventData.pointerDrag.GetComponent<CodeBlockDrag>() != null)
+        if ((eventData.pointerDrag != null || eventData.pointerDrag.gameObject != this.gameObject) && (eventData.pointerDrag.GetComponent<CodeBlockDrag>() != null || draggedObject != null))
         {
             CodeBlockDrag cbd = eventData.pointerDrag.GetComponent<CodeBlockDrag>();
+            if(cbd == null) cbd = draggedObject.GetComponent<CodeBlockDrag>();
             if (cbd != null && cbd.placeholderParent ==this.transform)
                 cbd.placeholderParent = cbd.returnParent;
 
@@ -69,12 +86,14 @@ public class ContentDrop : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
                 //set sibling index to nearest the mouse pointer
                 //--- here---//
                 //
+                Debug.Log("exited with other");
             }
             else
             {
                 //highlight and resize to fit
                 TogglePlaceholderDeActive(false, phDefaultSize, phDefaultColor);
 
+                Debug.Log("exited without");
             }
 
         }
@@ -86,12 +105,20 @@ public class ContentDrop : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         if (eventData.pointerDrag == null) return;
         if (eventData.pointerDrag.gameObject.tag != "decision"
            && eventData.pointerDrag.gameObject.tag != "repeat"
-           && eventData.pointerDrag.gameObject.tag != "codeblock") return;
+           && eventData.pointerDrag.gameObject.tag != "codeblock" 
+           && eventData.pointerDrag.gameObject.tag != "codeblockHolder") return;
         //parent here
         // int siblingIndex = placeholder.transform.GetSiblingIndex();
         CodeBlockDrag cbd = eventData.pointerDrag.GetComponent<CodeBlockDrag>();
         if (cbd != null)
             cbd.returnParent = this.transform;
+        else if(cbd == null && draggedObject != null)
+        {
+            cbd = draggedObject.GetComponent<CodeBlockDrag>();
+            if (cbd == null) return;
+            cbd.returnParent = this.transform;
+            draggedObject = null;
+        }
         // placeholder.transform.SetAsLastSibling();
         //     eventData.pointerDrag.transform.SetSiblingIndex(siblingIndex);
 
@@ -130,7 +157,7 @@ public class ContentDrop : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
             if(withActive)
             placeholder.SetActive(true);
 
-        DisableLineagePlaceholder();
+   
 
     }
 
@@ -147,23 +174,26 @@ public class ContentDrop : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
 
     }
 
-    void DisableLineagePlaceholder()
+    void DisableLineagePlaceholder(PointerEventData eventData)
     {
         Transform t = this.transform.parent;
-        if(t.parent != null || t.parent.parent.tag == "codecanvas" )
-        while(t.parent.tag != "codecanvas")
-        {
-            if(t.tag == "content")
+        if (t.parent != null)  //|| t.parent.parent.tag == "codecanvas" )
+            while (t.parent.gameObject.tag != "codecanvas")
             {
-                if(t.childCount>1)
-                t.GetComponent<ContentDrop>().TogglePlaceholderDeActive(true,phDefaultSize,phDefaultColor);
-                else
-                    t.GetComponent<ContentDrop>().TogglePlaceholderDeActive(false, phDefaultSize, phDefaultColor);
-            }
+                if (t.gameObject.tag == "content")
+                {
+                    //if (t.childCount > 1)
+                    //    t.GetComponent<ContentDrop>().TogglePlaceholderDeActive(true, phDefaultSize, phDefaultColor);
+                    //else
+                    //    t.GetComponent<ContentDrop>().TogglePlaceholderDeActive(false, phDefaultSize, phDefaultColor);
+                    t.GetComponent<ContentDrop>().OnPointerExit(eventData);
+                }
 
-            t = t.parent.transform;
-            Debug.Log("goes to parent");
-        }
+                t = t.parent.transform;
+                Debug.Log("goes to parent");
+            }
+        else
+            Debug.Log("Cannot find parent");
         Debug.Log("ends while");
 
     }

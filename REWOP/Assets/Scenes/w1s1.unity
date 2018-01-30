@@ -344,6 +344,11 @@ Prefab:
       propertyPath: EndEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 114311439742002190, guid: 7ccae628646218a448a0437c7148d6b0,
+        type: 2}
+      propertyPath: startDialogue.sentences.Array.data[3]
+      value: Go to the blacksmith near the village gate, and get your weapon.
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7ccae628646218a448a0437c7148d6b0, type: 2}
   m_IsPrefabParent: 0
@@ -2872,7 +2877,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 974169423}
   m_LocalRotation: {x: -0, y: -0, z: -0.000000013038516, w: 1}
-  m_LocalPosition: {x: 2571.6, y: 4422.3, z: 4033.5}
+  m_LocalPosition: {x: 2590.8, y: 4422.3, z: 4033.5}
   m_LocalScale: {x: 50, y: 50, z: 50}
   m_Children: []
   m_Father: {fileID: 1270478355}
@@ -3345,7 +3350,7 @@ MonoBehaviour:
     dialogue:
       name: Psuedo
       sentences:
-      - Hey! you got sucked too?
+      - Hey! you got captured too?
     camera: {fileID: 463690749}
     endSceneEvent:
       m_PersistentCalls:
@@ -3362,7 +3367,7 @@ MonoBehaviour:
     dialogue:
       name: Pheta
       sentences:
-      - We are sucked into WOL!
+      - We got captured into WOL!
       - We're stuck in the game what should we do?
     camera: {fileID: 2065901846}
     endSceneEvent:
@@ -6011,7 +6016,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1778631813}
   m_LocalRotation: {x: -0, y: -0, z: -0.000000013038516, w: 1}
-  m_LocalPosition: {x: 2534, y: 4422.3, z: 4028.7}
+  m_LocalPosition: {x: 2512.2, y: 4422.3, z: 4028.7}
   m_LocalScale: {x: 50, y: 50, z: 50}
   m_Children: []
   m_Father: {fileID: 1270478355}
@@ -6030,7 +6035,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questNumber: 4
   IsStartQuest: 1
-  startWithoutInteract: 0
+  startWithoutInteract: 1
 --- !u!65 &1778631816
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7629,7 +7634,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2128802052}
   serializedVersion: 2
-  m_Mass: 6.23
+  m_Mass: 100
   m_Drag: 0
   m_AngularDrag: 6.89
   m_UseGravity: 1

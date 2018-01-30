@@ -138,6 +138,7 @@ public class QuestObject : MonoBehaviour {
 
 
         EndEvent.Invoke();
+        EasySaveLoadManager.Instance.SaveData();
     }
     public void FailQuest()
     {

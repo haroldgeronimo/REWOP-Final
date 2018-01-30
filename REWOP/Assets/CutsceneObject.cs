@@ -61,7 +61,7 @@ public class CutsceneObject: MonoBehaviour {
         CSM.sceneCompleted[cutSceneNumber] = true;
         CSM.mainCamera.gameObject.SetActive(true);
         EndEvent.Invoke();
-
+        CutSceneState.Save();
 
     }
 

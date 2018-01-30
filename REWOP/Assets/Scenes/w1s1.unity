@@ -135,7 +135,7 @@ Prefab:
     - target: {fileID: 114294541019602196, guid: 7ccae628646218a448a0437c7148d6b0,
         type: 2}
       propertyPath: EndEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4091312450284660, guid: 7ccae628646218a448a0437c7148d6b0, type: 2}
       propertyPath: m_LocalPosition.x
@@ -293,6 +293,56 @@ Prefab:
         type: 2}
       propertyPath: endDialogue.sentences.Array.data[0]
       value: Village clear!
+      objectReference: {fileID: 0}
+    - target: {fileID: 114294541019602196, guid: 7ccae628646218a448a0437c7148d6b0,
+        type: 2}
+      propertyPath: EndEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 114294541019602196, guid: 7ccae628646218a448a0437c7148d6b0,
+        type: 2}
+      propertyPath: EndEvent.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114294541019602196, guid: 7ccae628646218a448a0437c7148d6b0,
+        type: 2}
+      propertyPath: EndEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 114294541019602196, guid: 7ccae628646218a448a0437c7148d6b0,
+        type: 2}
+      propertyPath: EndEvent.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114294541019602196, guid: 7ccae628646218a448a0437c7148d6b0,
+        type: 2}
+      propertyPath: EndEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1946128924}
+    - target: {fileID: 114294541019602196, guid: 7ccae628646218a448a0437c7148d6b0,
+        type: 2}
+      propertyPath: EndEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 134135269}
+    - target: {fileID: 114294541019602196, guid: 7ccae628646218a448a0437c7148d6b0,
+        type: 2}
+      propertyPath: EndEvent.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 114294541019602196, guid: 7ccae628646218a448a0437c7148d6b0,
+        type: 2}
+      propertyPath: EndEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 114294541019602196, guid: 7ccae628646218a448a0437c7148d6b0,
+        type: 2}
+      propertyPath: EndEvent.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 114294541019602196, guid: 7ccae628646218a448a0437c7148d6b0,
+        type: 2}
+      propertyPath: EndEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7ccae628646218a448a0437c7148d6b0, type: 2}
@@ -480,6 +530,7 @@ GameObject:
   - component: {fileID: 134135271}
   - component: {fileID: 134135270}
   - component: {fileID: 134135279}
+  - component: {fileID: 134135280}
   m_Layer: 8
   m_Name: Psuedo
   m_TagString: Enemy
@@ -643,6 +694,19 @@ MonoBehaviour:
     sentences: []
   IsCalledOnce: 0
   IsCalled: 0
+--- !u!114 &134135280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 134135269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe125b6677a78429aadfceed9154db9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 0
+  prefabName: 
 --- !u!1001 &160640637
 Prefab:
   m_ObjectHideFlags: 0
@@ -1675,7 +1739,7 @@ Transform:
   - {fileID: 1196647674}
   - {fileID: 1681201061}
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &486062750
 Prefab:
@@ -2259,6 +2323,19 @@ MonoBehaviour:
     - Why can't I stop singing?
     - Am I infected?
     - I hope not! TuaHaHaHa
+--- !u!114 &623952447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 623952445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe125b6677a78429aadfceed9154db9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 0
+  prefabName: 
 --- !u!1 &703168829 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1920742666849220, guid: fa0147c97a3c0824a83694a069fd192c,
@@ -2752,6 +2829,24 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 60d00f3276b2f744c94b35e9df45f801, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &922675601 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1677812356742646, guid: 60d00f3276b2f744c94b35e9df45f801,
+    type: 2}
+  m_PrefabInternal: {fileID: 922675600}
+--- !u!114 &922675602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 922675601}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe125b6677a78429aadfceed9154db9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 0
+  prefabName: 
 --- !u!1 &974169423
 GameObject:
   m_ObjectHideFlags: 0
@@ -3044,7 +3139,7 @@ Transform:
   m_LocalScale: {x: 7.643094, y: 1, z: 9.37049}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1005552006
 MonoBehaviour:
@@ -3697,7 +3792,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4422407710870752, guid: a7d342a25e7fb6d43b6e6f31a560afd8, type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a7d342a25e7fb6d43b6e6f31a560afd8, type: 2}
@@ -3739,7 +3834,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4558150162299136, guid: 099d1731863eed346bed372725b45674, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 198097654110051690, guid: 099d1731863eed346bed372725b45674,
         type: 2}
@@ -3749,7 +3844,7 @@ Prefab:
     - target: {fileID: 198097654110051690, guid: 099d1731863eed346bed372725b45674,
         type: 2}
       propertyPath: randomSeed
-      value: 1408371875
+      value: 863140481
       objectReference: {fileID: 0}
     - target: {fileID: 198097654110051690, guid: 099d1731863eed346bed372725b45674,
         type: 2}
@@ -3761,6 +3856,18 @@ Prefab:
       propertyPath: InitialModule.startSize.scalar
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 4558150162299136, guid: 099d1731863eed346bed372725b45674, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4558150162299136, guid: 099d1731863eed346bed372725b45674, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4558150162299136, guid: 099d1731863eed346bed372725b45674, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 0.1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 099d1731863eed346bed372725b45674, type: 2}
   m_IsPrefabParent: 0
@@ -3769,6 +3876,24 @@ ParticleSystemRenderer:
   m_PrefabParentObject: {fileID: 199124775099910542, guid: 099d1731863eed346bed372725b45674,
     type: 2}
   m_PrefabInternal: {fileID: 1188305571}
+--- !u!1 &1188305573 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1456716969313404, guid: 099d1731863eed346bed372725b45674,
+    type: 2}
+  m_PrefabInternal: {fileID: 1188305571}
+--- !u!114 &1188305574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1188305573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe125b6677a78429aadfceed9154db9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 0
+  prefabName: 
 --- !u!1001 &1188905042
 Prefab:
   m_ObjectHideFlags: 0
@@ -3970,7 +4095,7 @@ Transform:
   - {fileID: 1027735621}
   - {fileID: 2093725171}
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1210984233 stripped
 GameObject:
@@ -5201,6 +5326,69 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   main_camera: {fileID: 0}
+--- !u!1 &1490134830
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1490134831}
+  - component: {fileID: 1490134833}
+  - component: {fileID: 1490134832}
+  m_Layer: 0
+  m_Name: SceneSaveManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1490134831
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1490134830}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1490134832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1490134830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88da64136c3a42b43ae8ffc6c0241d3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneObjects:
+  - {fileID: 1946128924}
+  - {fileID: 134135269}
+  - {fileID: 1545831326}
+  - {fileID: 1837038520}
+  - {fileID: 623952445}
+  - {fileID: 1966059548}
+  - {fileID: 922675601}
+  - {fileID: 1188305573}
+  prefabs: []
+--- !u!114 &1490134833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1490134830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 459eb1280b1c0e94faa4f66241041a7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneObjectFile: SaveData/sceneobjects.dat
 --- !u!1001 &1539088439
 Prefab:
   m_ObjectHideFlags: 0
@@ -5290,6 +5478,19 @@ MonoBehaviour:
     sentences:
     - I hope somebody will fix this situation.
     - Viruses creeps me out!
+--- !u!114 &1545831328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1545831326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe125b6677a78429aadfceed9154db9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 0
+  prefabName: 
 --- !u!1 &1627615937 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1456716969313404, guid: 099d1731863eed346bed372725b45674,
@@ -5552,6 +5753,7 @@ GameObject:
   - component: {fileID: 1733850024}
   - component: {fileID: 1733850023}
   - component: {fileID: 1733850022}
+  - component: {fileID: 1733850031}
   m_Layer: 0
   m_Name: VillagerStatic (1)
   m_TagString: Untagged
@@ -5713,6 +5915,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: -90.397, z: 0}
+--- !u!114 &1733850031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1733850021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe125b6677a78429aadfceed9154db9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 0
+  prefabName: 
 --- !u!1 &1761734114 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1566175363216076, guid: 7ac2391ecc576d04580616069512e5b6,
@@ -5745,7 +5960,7 @@ PlayableDirector:
   serializedVersion: 3
   m_PlayableAsset: {fileID: 11400000, guid: 787a71abd418850459564944e6908be4, type: 2}
   m_InitialState: 0
-  m_WrapMode: 2
+  m_WrapMode: 0
   m_DirectorUpdateMode: 1
   m_InitialTime: 0
   m_SceneBindings:
@@ -6137,6 +6352,19 @@ MonoBehaviour:
     - Earlier, I was at the fort, doing my job
     - Suddenly, these creatures came attacking!
     - I ran until I got to the market and safely back here at Eankorss.
+--- !u!114 &1837038522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1837038520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe125b6677a78429aadfceed9154db9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 0
+  prefabName: 
 --- !u!1001 &1913199913
 Prefab:
   m_ObjectHideFlags: 0
@@ -6214,34 +6442,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 60d00f3276b2f744c94b35e9df45f801, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &1917072104
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1917072105}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1917072105
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1917072104}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 91.32314, y: -41.377136, z: 157.7485}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 16
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1946128922
 Transform:
   m_ObjectHideFlags: 0
@@ -6274,6 +6474,7 @@ GameObject:
   - component: {fileID: 1946128926}
   - component: {fileID: 1946128929}
   - component: {fileID: 1946128925}
+  - component: {fileID: 1946128927}
   m_Layer: 8
   m_Name: Pheta
   m_TagString: Enemy
@@ -6304,6 +6505,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lookRadius: 50
+--- !u!114 &1946128927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1946128924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe125b6677a78429aadfceed9154db9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 0
+  prefabName: 
 --- !u!114 &1946128929
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6438,6 +6652,19 @@ MonoBehaviour:
     - Viruses are said to be the one infecting the game
     - That's why I've been glitching lately
     - Txk! Txk! Txk!
+--- !u!114 &1966059550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1966059548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe125b6677a78429aadfceed9154db9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 0
+  prefabName: 
 --- !u!1 &1998326271 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1018415375677190, guid: fa0147c97a3c0824a83694a069fd192c,
@@ -7090,29 +7317,7 @@ MonoBehaviour:
       PublicKeyToken=null
   EndEvent:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1946128924}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Player
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 134135269}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
 --- !u!4 &2093725171

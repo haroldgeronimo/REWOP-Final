@@ -15,16 +15,19 @@ public class PlayerManager : MonoBehaviour {
         }
     }
 
-    private void Start()
+    public void Start()
     {
         if (EasySaveLoadManager.Instance.IsLoadGame)
             Load();
+        else
+            Debug.Log("DidNotLoadPlayerStats");
     }
 
     #endregion
     private void Load()
     {
         PlayerState.Load();
+        Debug.Log("LoadedPLayerStats");
     }
 
     public GameObject player;
@@ -38,7 +41,7 @@ public class PlayerManager : MonoBehaviour {
     IEnumerator DeathDelay()
     {
         yield return new WaitForSeconds(3);
-        Time.timeScale = 0;
+        SceneManager.LoadScene("GameOver");
     }
 
 }

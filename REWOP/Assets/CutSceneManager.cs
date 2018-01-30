@@ -18,7 +18,9 @@ public class CutSceneManager : MonoBehaviour {
         }
     }
     void Start () {
+        if(!EasySaveLoadManager.Instance.IsLoadGame)
         sceneCompleted = new bool[cutSceneObject.Length];
+   
         mainCamera = Camera.main;
     }
 	

@@ -7,9 +7,7 @@ public class PlayerStats : CharStats {
     public FacialScript facial;
     private void Start()
     {
-
-        Load();
-        StartCoroutine(HurtUI());
+                StartCoroutine(HurtUI());
     }
     public override void Die()
     {
@@ -33,14 +31,6 @@ public class PlayerStats : CharStats {
             return true;
         else
             return false;
-    }
-    public void Load()//Set player health
-    {
-        if (SaveLoadManager.Instance != null)
-            if (SaveLoadManager.Instance.gameData != null)
-        {
-            SetCurrentHealth(SaveLoadManager.Instance.gameData.PlayerLife);
-        }
     }
     public override void TakeDamage(int damage)
     {

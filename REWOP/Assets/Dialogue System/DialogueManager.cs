@@ -11,6 +11,7 @@ public class DialogueManager : MonoBehaviour {
     public PlayerMotor playerMotor;
     [HideInInspector]
     public bool IsDone = false;
+    public bool IsPauseGame = false;
     Queue<string> sentences;
 	// Use this for initialization
 	void Start () {
@@ -22,11 +23,11 @@ public class DialogueManager : MonoBehaviour {
         sentences.Clear();
         dBoxAnimator.SetBool("IsOpen", true);
         CtrlAnimator.SetBool("IsOpen", false);
-        playerMotor.Freeze = true; //potential change here to pause time
+       // playerMotor.Freeze = true; //potential change here to pause time
        // Debug.Log("Starting conversation with " + dialogue.name);
         nameText.text = dialogue.name;
-
-       // Time.timeScale = 0;
+        if(IsPauseGame)
+        Time.timeScale = 0;
         foreach(string sentence in dialogue.sentences)
         {
 
@@ -72,7 +73,7 @@ public class DialogueManager : MonoBehaviour {
         foreach (char letter in sentence.ToCharArray()) {
 
             dialogueText.text += letter;
-            yield return new WaitForSeconds(0.05f);
+            yield return null;
         }
         IsTypeSentence = false;
     }
@@ -80,8 +81,9 @@ public class DialogueManager : MonoBehaviour {
     void EndDialogue() {
         // Debug.Log("End of Conversation");
         IsDone = true;
-        //  Time.timeScale = 1;
-        playerMotor.Freeze = false;//potential change here to play time
+       if (IsPauseGame)
+                Time.timeScale = 1;
+        //playerMotor.Freeze = false;//potential change here to play time
         dBoxAnimator.SetBool("IsOpen",false);
         CtrlAnimator.SetBool("IsOpen", true);
     }

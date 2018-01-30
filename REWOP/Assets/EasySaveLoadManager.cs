@@ -29,21 +29,28 @@ public class EasySaveLoadManager : MonoBehaviour {
         PlayerState.Save();
         SceneState.Save();
         QuestState.Save();
+        CutSceneState.Save();
+        ES2SaveManager.instance.Save();
         ES2.Save(true, folder + "IsSaved");
     }
     public void LoadData()
     {
         Debug.Log("IsLoadData!");
-        SceneState.Load();
+        Debug.Log("Set load game to True for reference");
         IsLoadGame = true;
- 
-     
+        SceneState.Load();
+
     }
     public bool isSaveExists(string path)
     {
 
         return ES2.Exists(folder + path);
 
+    }
+    public void deleteSave()
+    {
+        ES2.Delete(folder);
+        ES2.Delete("IsSaved");
     }
 }
 
@@ -104,6 +111,27 @@ public static class QuestState
     public static void Load()
     {
         QuestManager.instance.questCompleted = ES2.LoadArray<bool>(folder + "Scenes.dat?tag=questCompleted");
+    }
+}
+
+
+public static class CutSceneState
+{
+    public static string folder = EasySaveLoadManager.Instance.folder;
+    public static void Save()
+    {
+        //Get Quest instance and lagay mo dun ung load hahahhah
+        if (CutSceneManager.instance == null)
+        {
+            Debug.LogError("QM is null!");
+            return;
+        }
+        ES2.Save(CutSceneManager.instance.sceneCompleted, folder + "Scenes.dat?tag=sceneCompleted");
+        ///.Instance.savedScenes = ES2.LoadList<bool>(folder + "Quests.dat?tag=questCompleted");
+    }
+    public static void Load()
+    {
+        CutSceneManager.instance.sceneCompleted = ES2.LoadArray<bool>(folder + "Scenes.dat?tag=sceneCompleted");
     }
 }
 #endregion

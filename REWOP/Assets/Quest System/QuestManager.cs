@@ -19,10 +19,12 @@ public class QuestManager : MonoBehaviour {
         DM = FindObjectOfType<DialogueManager>();
         questCompleted = new bool[quests.Length];
         if (EasySaveLoadManager.Instance.IsLoadGame)
+        {
             QuestState.Load();
+            CutSceneState.Load();
+        }
 
-        EasySaveLoadManager.Instance.IsLoadGame = false;
-
+      //  EasySaveLoadManager.Instance.IsLoadGame = false;
     }
 	
     public void ShowStartDialogue(Dialogue dialogue) {
@@ -32,7 +34,8 @@ public class QuestManager : MonoBehaviour {
     public void ShowEndDialogue(Dialogue dialogue)
     {
         DM.StartDialogue(dialogue);
-        EasySaveLoadManager.Instance.SaveData();
+      
+       
     }
 
 

@@ -417,7 +417,7 @@ public class CodeSimulator : MonoBehaviour
         }
         if (!Player && !Enemy)
         {
-           // ReturnString += " No one received any points";
+           // ReturnString += " No one received any points"; 
         }
 
 

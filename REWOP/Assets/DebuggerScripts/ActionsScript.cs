@@ -15,6 +15,11 @@ public partial class ActionsScript : MonoBehaviour {
     public ActionStates currentAction;
 
 
+	public void Start(){
+		playerStats = PlayerManager.instance.player.GetComponent<PlayerStats> ();
+	}
+
+
     public void ExecuteAction(ActionStates state)
     {   
         Debug.Log("Execute Action:" + state.ToString());

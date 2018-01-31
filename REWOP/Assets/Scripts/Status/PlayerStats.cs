@@ -34,7 +34,7 @@ public class PlayerStats : CharStats {
     }
     public override void TakeDamage(int damage)
     {
-        Hurt.HurtAccentShow(damage);
+		Hurt.HurtAccentShow(damage);
         base.TakeDamage(damage);
         IsHurt = true;
     }

@@ -137,7 +137,7 @@ Prefab:
     - target: {fileID: 114644259206732464, guid: 12a5385780a5ec744bedd020ac5cd565,
         type: 2}
       propertyPath: sceneToUnload.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4964372604873626, guid: 12a5385780a5ec744bedd020ac5cd565, type: 2}
       propertyPath: m_LocalPosition.x
@@ -235,7 +235,7 @@ Prefab:
     - target: {fileID: 114644259206732464, guid: 12a5385780a5ec744bedd020ac5cd565,
         type: 2}
       propertyPath: sceneToUnload.Array.data[1]
-      value: 
+      value: w1s1tos2
       objectReference: {fileID: 0}
     - target: {fileID: 114559946000907930, guid: 12a5385780a5ec744bedd020ac5cd565,
         type: 2}

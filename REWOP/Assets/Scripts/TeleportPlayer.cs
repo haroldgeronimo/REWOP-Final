@@ -7,6 +7,8 @@ public class TeleportPlayer : MonoBehaviour {
    SceneControl sc;
     private void Start()
     {
+
+        sc = SceneControl.instance;
         ////check if this is loaded
         if (!EasySaveLoadManager.Instance.IsLoadGame)
         {
@@ -23,6 +25,9 @@ public class TeleportPlayer : MonoBehaviour {
 
         Debug.Log("Teleport Done");
         //unload last scene
-       
+        foreach (string scene in sceneToUnload)
+        {
+            sc.UnloadScene(scene);
+        }
     }
  }

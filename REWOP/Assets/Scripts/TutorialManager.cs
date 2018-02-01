@@ -40,7 +40,7 @@ public class TutorialManager : MonoBehaviour {
     }
     public void DisplayNextSlide()
     {
-        if(slides.Count <= 0 || tutSlides.Length == 0)
+        if (slides.Count <= 0 || tutSlides.Length == 0)
         {
             EndPresentation();
         }
@@ -50,6 +50,9 @@ public class TutorialManager : MonoBehaviour {
         Description.text = slide.Description;
 
     }
+
+    
+
     public void EndPresentation()
     {
         tutorialPanel.SetActive(false);

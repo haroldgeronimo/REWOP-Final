@@ -26,7 +26,7 @@ public class SceneControl : MonoBehaviour {
                 loadedScene.Add(sceneName);
                 Debug.Log(sceneName + " has been loaded");
             MusicManager.instance.LevelWasLoaded(sceneName);
-            SceneState.Save();
+     
         }
 
      
@@ -52,7 +52,7 @@ public class SceneControl : MonoBehaviour {
         SceneManager.UnloadSceneAsync(Name);
         if (loadedScene.Contains(Name))
             loadedScene.Remove(Name);
-        SceneState.Save();
+    
     }
 
 }

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EasySaveLoadManager : MonoBehaviour {
     [HideInInspector()]
@@ -64,6 +65,9 @@ public static class PlayerState {
         ES2.Save(PlayerManager.instance.player.transform.rotation, folder + "Player.dat?tag=rotation");
         ES2.Save(PlayerManager.instance.player.GetComponent<PlayerStats>().currentHealth, folder + "Player.dat?tag=health");
         ES2.Save(AchievementData.instance.Achievements, folder + "Player.dat?tag=achievements");
+        ES2.Save(GameObject.FindGameObjectWithTag("Sword").GetComponent<SkinnedMeshRenderer>().enabled, folder + "Player.dat?tag=sword");
+        ES2.Save(GameObject.FindGameObjectWithTag("AttackButton").GetComponent<Image>().raycastTarget, folder + "Player.dat?tag=attackBtn");
+        ES2.Save(GameObject.FindGameObjectWithTag("AttackButton").GetComponent<Image>().color, folder + "Player.dat?tag=attackBtnClr");
     }
     public static void Load()
     {
@@ -71,6 +75,9 @@ public static class PlayerState {
         PlayerManager.instance.player.transform.rotation = ES2.Load<Quaternion>(folder + "Player.dat?tag=rotation");
         PlayerManager.instance.player.GetComponent<PlayerStats>().currentHealth = ES2.Load<int>(folder + "Player.dat?tag=health");
         AchievementData.instance.Achievements = ES2.LoadList<AchievementMeta>(folder + "Player.dat?tag=achievements");
+        GameObject.FindGameObjectWithTag("Sword").GetComponent<SkinnedMeshRenderer>().enabled = ES2.Load<bool>(folder + "Player.dat?tag=sword");
+        GameObject.FindGameObjectWithTag("AttackButton").GetComponent<Image>().raycastTarget = ES2.Load<bool>(folder + "Player.dat?tag=attackBtn");
+        GameObject.FindGameObjectWithTag("AttackButton").GetComponent<Image>().color = ES2.Load<Color>(folder + "Player.dat?tag=attackBtnClr");
     }
     
 }
@@ -126,11 +133,12 @@ public static class CutSceneState
             Debug.LogError("QM is null!");
             return;
         }
-        ES2.Save(CutSceneManager.instance.sceneCompleted, folder + "Scenes.dat?tag=sceneCompleted");
+        if (CutSceneManager.instance != null)
+            ES2.Save(CutSceneManager.instance.sceneCompleted, folder + "Scenes.dat?tag=sceneCompleted");
         ///.Instance.savedScenes = ES2.LoadList<bool>(folder + "Quests.dat?tag=questCompleted");
     }
     public static void Load()
-    {
+    {if(CutSceneManager.instance != null)
         CutSceneManager.instance.sceneCompleted = ES2.LoadArray<bool>(folder + "Scenes.dat?tag=sceneCompleted");
     }
 }

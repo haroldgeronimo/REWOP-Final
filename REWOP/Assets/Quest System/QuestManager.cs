@@ -23,10 +23,16 @@ public class QuestManager : MonoBehaviour {
             QuestState.Load();
             CutSceneState.Load();
         }
-
+        StartCoroutine(LateStart());
       //  EasySaveLoadManager.Instance.IsLoadGame = false;
     }
-	
+	IEnumerator LateStart()
+    {
+        yield return new WaitForSeconds(3);
+        if (EasySaveLoadManager.Instance.IsLoadGame) {
+            EasySaveLoadManager.Instance.IsLoadGame = false;        }
+
+    }
     public void ShowStartDialogue(Dialogue dialogue) {
         DM.StartDialogue(dialogue);
     }

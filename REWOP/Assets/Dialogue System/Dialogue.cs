@@ -7,6 +7,7 @@ public class Dialogue{
 
     [TextArea(3,5)]
     public string[] sentences;
+    public bool IsPause = false;
   
 
 }

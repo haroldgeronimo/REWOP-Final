@@ -26,8 +26,10 @@ public class DialogueManager : MonoBehaviour {
        // playerMotor.Freeze = true; //potential change here to pause time
        // Debug.Log("Starting conversation with " + dialogue.name);
         nameText.text = dialogue.name;
-        if(IsPauseGame)
-        Time.timeScale = 0;
+        if (dialogue.IsPause) {
+            IsPauseGame = dialogue.IsPause;
+            Time.timeScale = 0; }
+   
         foreach(string sentence in dialogue.sentences)
         {
 
@@ -83,6 +85,7 @@ public class DialogueManager : MonoBehaviour {
         IsDone = true;
        if (IsPauseGame)
                 Time.timeScale = 1;
+        IsPauseGame = false;
         //playerMotor.Freeze = false;//potential change here to play time
         dBoxAnimator.SetBool("IsOpen",false);
         CtrlAnimator.SetBool("IsOpen", true);

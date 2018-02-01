@@ -12,7 +12,7 @@ public class HurtScript : MonoBehaviour {
     private void Start()
     {
         HurtAccentImg = GetComponent<Image>();
-       
+      
     }
     public IEnumerator HurtAccent()
     {
@@ -36,5 +36,9 @@ public class HurtScript : MonoBehaviour {
         if (!IsFading) {
             StartCoroutine(HurtAccent());
         }
+    }
+    private void OnEnable()
+    {
+        HurtAccentShow(0);
     }
 }

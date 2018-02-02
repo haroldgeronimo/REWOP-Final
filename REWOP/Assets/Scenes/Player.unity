@@ -394,7 +394,7 @@ RectTransform:
   - {fileID: 208342243}
   - {fileID: 368263360}
   m_Father: {fileID: 1047491840}
-  m_RootOrder: 14
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -2567,7 +2567,7 @@ RectTransform:
   - {fileID: 1898741983}
   - {fileID: 190903042}
   m_Father: {fileID: 1047491840}
-  m_RootOrder: 11
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
@@ -2794,11 +2794,11 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 1
+  m_havePropertiesChanged: 0
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 1
+  m_isInputParsingRequired: 0
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -2991,7 +2991,7 @@ Transform:
   m_LocalScale: {x: 0.625, y: 0.625, z: 0.625}
   m_Children: []
   m_Father: {fileID: 1047491840}
-  m_RootOrder: 12
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &493749283
 MonoBehaviour:
@@ -5006,7 +5006,7 @@ RectTransform:
   - {fileID: 1332150403}
   - {fileID: 1438899089}
   m_Father: {fileID: 1047491840}
-  m_RootOrder: 10
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -5928,13 +5928,13 @@ RectTransform:
   - {fileID: 1178571715}
   - {fileID: 1620987689}
   - {fileID: 757479793}
-  - {fileID: 1176427745}
-  - {fileID: 116249985}
-  - {fileID: 802636474}
   - {fileID: 437131883}
-  - {fileID: 493749282}
-  - {fileID: 396120214}
+  - {fileID: 116249985}
+  - {fileID: 1176427745}
   - {fileID: 59917161}
+  - {fileID: 802636474}
+  - {fileID: 396120214}
+  - {fileID: 493749282}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6826,7 +6826,7 @@ RectTransform:
   - {fileID: 1219304313}
   - {fileID: 1080777023}
   m_Father: {fileID: 1047491840}
-  m_RootOrder: 8
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -7912,7 +7912,7 @@ Prefab:
     - target: {fileID: 224267777466923394, guid: 67cf3ddab72d45c4aafcee1979ca3678,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0.41391537
+      value: 0.4139154
       objectReference: {fileID: 0}
     - target: {fileID: 224267777466923394, guid: 67cf3ddab72d45c4aafcee1979ca3678,
         type: 2}
@@ -9064,11 +9064,11 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 1
+  m_havePropertiesChanged: 0
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 1
+  m_isInputParsingRequired: 0
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:

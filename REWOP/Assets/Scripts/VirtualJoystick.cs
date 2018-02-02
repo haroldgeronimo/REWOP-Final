@@ -25,16 +25,16 @@ public class VirtualJoystick : MonoBehaviour, IDragHandler, IPointerUpHandler, I
             float y;
             if (IsStatic)
             {
-                Debug.Log("IsStatic");
+               // Debug.Log("IsStatic");
                 x = (bgImg.rectTransform.pivot.x == 1) ? pos.x * 2 : pos.x * 2;
                 y = (bgImg.rectTransform.pivot.y == 1) ? pos.y * 2 : pos.y * 2;
             }
             else
             {
-                Debug.Log("IsNotStatic");
+               // Debug.Log("IsNotStatic");
                 x = (bgImg.rectTransform.pivot.x == 1) ? pos.x * 2 +1 : pos.x * 2 -1;
                 y = (bgImg.rectTransform.pivot.y == 1) ? pos.y * 2 + 1 : pos.y *2 -1;
-                Debug.Log(x + "," + y);
+              //  Debug.Log(x + "," + y);
             }
           
 

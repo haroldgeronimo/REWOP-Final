@@ -36,9 +36,10 @@ public class EasySaveLoadManager : MonoBehaviour {
     }
     public void LoadData()
     {
+        IsLoadGame = true;
         Debug.Log("IsLoadData!");
         Debug.Log("Set load game to True for reference");
-        IsLoadGame = true;
+    
         SceneState.Load();
 
     }

@@ -28,7 +28,7 @@ public class QuestManager : MonoBehaviour {
     }
 	IEnumerator LateStart()
     {
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(.5f);
         if (EasySaveLoadManager.Instance.IsLoadGame) {
             EasySaveLoadManager.Instance.IsLoadGame = false;        }
 

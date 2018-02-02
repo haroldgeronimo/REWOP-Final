@@ -76,6 +76,8 @@ public class InteractTrigger : MonoBehaviour {
     {
         if (other.gameObject == PlayerManager.instance.player)
         {
+            //exiting the trigger
+            Debug.Log("You have exited an interacrt trigger");
             CloseButtonUI();
         }
     }

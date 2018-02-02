@@ -4603,6 +4603,7 @@ GameObject:
   - component: {fileID: 281439603}
   - component: {fileID: 281439605}
   - component: {fileID: 281439606}
+  - component: {fileID: 281439607}
   m_Layer: 0
   m_Name: Q2IT
   m_TagString: Untagged
@@ -4742,6 +4743,19 @@ MonoBehaviour:
     name: 
     sentences: []
     IsPause: 0
+--- !u!114 &281439607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 281439598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe125b6677a78429aadfceed9154db9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 0
+  prefabName: 
 --- !u!1 &291422780
 GameObject:
   m_ObjectHideFlags: 0
@@ -14254,6 +14268,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneObjects:
   - {fileID: 1126443895}
+  - {fileID: 281439598}
   prefabs: []
 --- !u!114 &927330508
 MonoBehaviour:

@@ -36,7 +36,7 @@ public class CutsceneObject: MonoBehaviour {
     CutScene cutscene;
     public void ShowNextScene()
     {
-        Debug.Log("cs count:" + cs.Count);
+       // Debug.Log("cs count:" + cs.Count);
         if (cs.Count > 0)
         {
         
@@ -69,7 +69,7 @@ public class CutsceneObject: MonoBehaviour {
     {
         while (!DM.IsDone)
             yield return null;
-        Debug.Log("cs count:" + cs.Count);
+    //    Debug.Log("cs count:" + cs.Count);
        cutscene.endSceneEvent.Invoke();
         cutscene.camera.gameObject.SetActive(false);
         ShowNextScene();

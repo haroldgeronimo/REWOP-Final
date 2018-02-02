@@ -20,6 +20,7 @@ public class PauseMenu : MonoBehaviour {
         }
         else
         {
+            if(!FindObjectOfType<DialogueManager>().IsPauseGame)
             Time.timeScale = 1f;
         }
 

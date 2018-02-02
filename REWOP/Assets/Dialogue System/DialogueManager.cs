@@ -26,9 +26,9 @@ public class DialogueManager : MonoBehaviour {
        // playerMotor.Freeze = true; //potential change here to pause time
        // Debug.Log("Starting conversation with " + dialogue.name);
         nameText.text = dialogue.name;
-        if (dialogue.IsPause) {
+       // if (dialogue.IsPause) {
             IsPauseGame = dialogue.IsPause;
-            Time.timeScale = 0; }
+            Time.timeScale = 0; //}
    
         foreach(string sentence in dialogue.sentences)
         {
@@ -83,7 +83,7 @@ public class DialogueManager : MonoBehaviour {
     void EndDialogue() {
         // Debug.Log("End of Conversation");
         IsDone = true;
-       if (IsPauseGame)
+       //if (IsPauseGame)
                 Time.timeScale = 1;
         IsPauseGame = false;
         //playerMotor.Freeze = false;//potential change here to play time

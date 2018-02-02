@@ -12,7 +12,7 @@ public class CutSceneTrigger : MonoBehaviour {
 	}
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.name == "Nexo" || PlayerManager.instance.player)
+        if(other.gameObject.name == "Nexo" || other.gameObject == PlayerManager.instance.player)
         {
 
    

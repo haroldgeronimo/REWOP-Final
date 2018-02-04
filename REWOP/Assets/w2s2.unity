@@ -973,6 +973,7 @@ MonoBehaviour:
   questNumber: 0
   QO: {fileID: 0}
   EndQT: {fileID: 0}
+  CollectWithoutInteract: 0
 --- !u!114 &124105258
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1485,7 +1486,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4562722189607104, guid: bf1b95e2ec396324e9b4ef89b504af45, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4562722189607104, guid: bf1b95e2ec396324e9b4ef89b504af45, type: 2}
       propertyPath: m_LocalScale.x
@@ -1745,7 +1746,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4418930487388372, guid: e42e5f288ada3474ab7b0e4868be676a, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4418930487388372, guid: e42e5f288ada3474ab7b0e4868be676a, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -1753,15 +1754,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4930760368756290, guid: e42e5f288ada3474ab7b0e4868be676a, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 17921.9
+      value: 17959
       objectReference: {fileID: 0}
     - target: {fileID: 4930760368756290, guid: e42e5f288ada3474ab7b0e4868be676a, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 15734.9
+      value: 15735
       objectReference: {fileID: 0}
     - target: {fileID: 4930760368756290, guid: e42e5f288ada3474ab7b0e4868be676a, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -9469
+      value: -9427
       objectReference: {fileID: 0}
     - target: {fileID: 4422745045412916, guid: e42e5f288ada3474ab7b0e4868be676a, type: 2}
       propertyPath: m_LocalPosition.x
@@ -1914,11 +1915,163 @@ Prefab:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114449789465800330, guid: e42e5f288ada3474ab7b0e4868be676a,
+        type: 2}
+      propertyPath: startWithoutInteract
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4930760368756290, guid: e42e5f288ada3474ab7b0e4868be676a, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 71.55009
+      objectReference: {fileID: 0}
+    - target: {fileID: 4930760368756290, guid: e42e5f288ada3474ab7b0e4868be676a, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 111.968254
+      objectReference: {fileID: 0}
+    - target: {fileID: 4930760368756290, guid: e42e5f288ada3474ab7b0e4868be676a, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 29.866636
+      objectReference: {fileID: 0}
+    - target: {fileID: 114025601646058350, guid: e42e5f288ada3474ab7b0e4868be676a,
+        type: 2}
+      propertyPath: startWithoutInteract
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114739967248064186, guid: e42e5f288ada3474ab7b0e4868be676a,
+        type: 2}
+      propertyPath: startWithoutInteract
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114823984242810662, guid: e42e5f288ada3474ab7b0e4868be676a,
+        type: 2}
+      propertyPath: startWithoutInteract
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114117488916474144, guid: e42e5f288ada3474ab7b0e4868be676a, type: 2}
     - {fileID: 114118473873647772, guid: e42e5f288ada3474ab7b0e4868be676a, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e42e5f288ada3474ab7b0e4868be676a, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &195664883 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1618898198790154, guid: e42e5f288ada3474ab7b0e4868be676a,
+    type: 2}
+  m_PrefabInternal: {fileID: 195664882}
+--- !u!1 &195664884 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1872838517160292, guid: e42e5f288ada3474ab7b0e4868be676a,
+    type: 2}
+  m_PrefabInternal: {fileID: 195664882}
+--- !u!1 &195664885 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1872742695060912, guid: e42e5f288ada3474ab7b0e4868be676a,
+    type: 2}
+  m_PrefabInternal: {fileID: 195664882}
+--- !u!1 &195664886 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1498699155446172, guid: e42e5f288ada3474ab7b0e4868be676a,
+    type: 2}
+  m_PrefabInternal: {fileID: 195664882}
+--- !u!114 &195664887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 195664883}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 137b90c7a50c24649a92261fc37d7898, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsQuestTrigger: 0
+  IsQuestCollectTrigger: 1
+  IsEvent: 0
+  OneTimeEvent: 0
+  IsBagTrigger: 1
+  eventToInvoke:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  defaultDialogue:
+    name: 
+    sentences: []
+    IsPause: 0
+--- !u!114 &195664888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 195664884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 137b90c7a50c24649a92261fc37d7898, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsQuestTrigger: 0
+  IsQuestCollectTrigger: 1
+  IsEvent: 0
+  OneTimeEvent: 0
+  IsBagTrigger: 1
+  eventToInvoke:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  defaultDialogue:
+    name: 
+    sentences: []
+    IsPause: 0
+--- !u!114 &195664889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 195664885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 137b90c7a50c24649a92261fc37d7898, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsQuestTrigger: 0
+  IsQuestCollectTrigger: 1
+  IsEvent: 0
+  OneTimeEvent: 0
+  IsBagTrigger: 1
+  eventToInvoke:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  defaultDialogue:
+    name: 
+    sentences: []
+    IsPause: 0
+--- !u!114 &195664890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 195664886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 137b90c7a50c24649a92261fc37d7898, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsQuestTrigger: 0
+  IsQuestCollectTrigger: 1
+  IsEvent: 0
+  OneTimeEvent: 0
+  IsBagTrigger: 1
+  eventToInvoke:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  defaultDialogue:
+    name: 
+    sentences: []
+    IsPause: 0
 --- !u!1 &226279274
 GameObject:
   m_ObjectHideFlags: 0
@@ -2543,7 +2696,7 @@ Transform:
   - {fileID: 1632148239}
   - {fileID: 639123034}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &316690442
 GameObject:
@@ -3598,6 +3751,7 @@ MonoBehaviour:
   questNumber: 0
   QO: {fileID: 0}
   EndQT: {fileID: 0}
+  CollectWithoutInteract: 0
 --- !u!114 &403345784
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3929,7 +4083,7 @@ Transform:
   m_Children:
   - {fileID: 1034221853}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &429038327
 GameObject:
@@ -4176,6 +4330,7 @@ MonoBehaviour:
   questNumber: 0
   QO: {fileID: 0}
   EndQT: {fileID: 0}
+  CollectWithoutInteract: 0
 --- !u!114 &441901803
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5760,7 +5915,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questNumber: 1
   QM: {fileID: 304494013}
-  Title: Go to the next level
+  Title: Go to the portal
   Description: Go to the next level
   IsCollection: 0
   IsBoss: 0
@@ -5773,10 +5928,12 @@ MonoBehaviour:
     name: 
     sentences:
     - Straight forward and you'll be on the next level instantly.
+    IsPause: 0
   endDialogue:
     name: 
     sentences:
-    - 
+    - That's the portal!
+    IsPause: 0
   BQ:
     battleCam: {fileID: 0}
     codeBlocks: {fileID: 0}
@@ -6927,6 +7084,7 @@ MonoBehaviour:
   questNumber: 0
   QO: {fileID: 0}
   EndQT: {fileID: 0}
+  CollectWithoutInteract: 0
 --- !u!114 &738706531
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7514,6 +7672,7 @@ MonoBehaviour:
   questNumber: 0
   QO: {fileID: 0}
   EndQT: {fileID: 0}
+  CollectWithoutInteract: 0
 --- !u!114 &823352381
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8816,7 +8975,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4762507026098798, guid: 0b5d2936f53444f4788cffb72bb44057, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4762507026098798, guid: 0b5d2936f53444f4788cffb72bb44057, type: 2}
       propertyPath: m_LocalScale.x
@@ -9561,6 +9720,7 @@ MonoBehaviour:
   questNumber: 0
   QO: {fileID: 0}
   EndQT: {fileID: 0}
+  CollectWithoutInteract: 0
 --- !u!114 &1061138259
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14450,7 +14610,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4939735714404632, guid: d6c4c5c35e9b4b64ea06879e71cbfff6, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1044706017949998, guid: d6c4c5c35e9b4b64ea06879e71cbfff6, type: 2}
       propertyPath: m_IsActive
@@ -15033,6 +15193,7 @@ MonoBehaviour:
   questNumber: 0
   QO: {fileID: 0}
   EndQT: {fileID: 0}
+  CollectWithoutInteract: 0
 --- !u!114 &1610861229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15483,8 +15644,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questNumber: 0
   QM: {fileID: 304494013}
-  Title: Find puzzle pieces
-  Description: Find puzzle pieces and escape the maze stage.
+  Title: Find the keys
+  Description: Find keys and escape the maze stage.
   IsCollection: 1
   IsBoss: 0
   EndInstant: 0
@@ -15497,6 +15658,7 @@ MonoBehaviour:
     sentences:
     - Find the missing puzzle pieces and escape this maze area to proceed to the next
       level.
+    IsPause: 0
   endDialogue:
     name: Nexo
     sentences:
@@ -15504,6 +15666,7 @@ MonoBehaviour:
     - 'The Last Piece!!
 
 '
+    IsPause: 0
   BQ:
     battleCam: {fileID: 0}
     codeBlocks: {fileID: 0}
@@ -15974,6 +16137,7 @@ MonoBehaviour:
   questNumber: 0
   QO: {fileID: 0}
   EndQT: {fileID: 0}
+  CollectWithoutInteract: 0
 --- !u!114 &1769238558
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16986,6 +17150,7 @@ MonoBehaviour:
   questNumber: 0
   QO: {fileID: 0}
   EndQT: {fileID: 0}
+  CollectWithoutInteract: 0
 --- !u!114 &1919205660
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class ContentDrop : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IDropHandler//,IPointerUpHandler
@@ -12,6 +13,7 @@ public class ContentDrop : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     public Color phDefaultColor;
     public Vector2 phDefaultSize;
     private bool NormalState = true;
+    public UnityEvent droppedEvent;
 
     public GameObject draggedObject;
     private void Start()
@@ -118,6 +120,7 @@ public class ContentDrop : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
             if (cbd == null) return;
             cbd.returnParent = this.transform;
             draggedObject = null;
+            
         }
         // placeholder.transform.SetAsLastSibling();
         //     eventData.pointerDrag.transform.SetSiblingIndex(siblingIndex);

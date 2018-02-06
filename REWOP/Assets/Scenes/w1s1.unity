@@ -4112,7 +4112,7 @@ MonoBehaviour:
     target: {fileID: 134135278}
     offset: {x: 0, y: 0, z: 0}
     dialogue:
-      name: Psuedo
+      name: Pseudo
       sentences:
       - Hey! you got captured too?
       IsPause: 0
@@ -4168,7 +4168,7 @@ MonoBehaviour:
     target: {fileID: 134135278}
     offset: {x: 0, y: 0, z: 0}
     dialogue:
-      name: Psuedo
+      name: Pseudo
       sentences:
       - We should seek help from the villagers here... It's possible they know what
         happened
@@ -4225,7 +4225,7 @@ MonoBehaviour:
     target: {fileID: 0}
     offset: {x: 0, y: 0, z: 0}
     dialogue:
-      name: Psuedo & Pheta
+      name: Pseudo & Pheta
       sentences:
       - What?! You're Nexo? The Nexo?!
       - You're the greatest in this game.You are our idol!

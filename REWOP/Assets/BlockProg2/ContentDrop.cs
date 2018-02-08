@@ -21,6 +21,18 @@ public class ContentDrop : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         placeholder = this.transform.GetChild(0).gameObject;
         phDefaultColor = placeholder.GetComponent<Image>().color;
         phDefaultSize = placeholder.GetComponent<RectTransform>().sizeDelta;
+        childCount = transform.childCount;
+    }
+    int childCount;
+    private void LateUpdate()
+    {
+        LayoutRebuilder.ForceRebuildLayoutImmediate(transform.parent.GetComponent<RectTransform>());
+        if (transform.childCount != childCount)
+        {
+            childCount = transform.childCount;
+
+            StartCoroutine(LateDrop());
+        }
     }
     public void OnPointerEnter(PointerEventData eventData) {
         if (eventData.pointerDrag == null) { Debug.Log("null pointer drag"); return; }
@@ -127,9 +139,24 @@ public class ContentDrop : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
 
 
        TogglePlaceholderDeActive(true, phDefaultSize, phDefaultColor);
-      
+
+
     }
 
+
+IEnumerator LateDrop()
+    {
+        yield return null;
+        if (WalkthroughManager.instance != null)
+            if (GetComponents<WalkthroughTrigger>() != null) {
+                WalkthroughTrigger[] triggers = GetComponents<WalkthroughTrigger>();
+                foreach (WalkthroughTrigger trigger in triggers)
+                {
+                    if (trigger.IsDrag)
+                        trigger.triggerTry();
+                }
+            }
+    }
 
     public List<GameObject> GetAllChild()
     {
@@ -200,11 +227,7 @@ public class ContentDrop : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         Debug.Log("ends while");
 
     }
-    private void LateUpdate()
-    {
-        LayoutRebuilder.ForceRebuildLayoutImmediate(transform.parent.GetComponent<RectTransform>());
-        
-    }
+    
 
     public void PlaceholdersetActive()
     {

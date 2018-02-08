@@ -3,12 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
 using TMPro;
 public class WalkthroughManager : MonoBehaviour {
     [HideInInspector]
     public static WalkthroughManager instance;
     [Header("UI")]
    public TextMeshProUGUI captionUI;
+    public Animator notif;
     [Space(3)]
     [Header("Dragging")]
     public Image dragHand;
@@ -31,6 +33,10 @@ public class WalkthroughManager : MonoBehaviour {
     [Space(4)]
     [Header("Controls")]
     public GameObject[] controls;
+    [Space(4)]
+    [Header("Events")]
+    public UnityEvent startEvent;
+    public UnityEvent endEvent;
 
     private Vector3 startPos;
 
@@ -53,7 +59,8 @@ public class WalkthroughManager : MonoBehaviour {
 
     private void StartWalkthrough()
     {
-        currentCount = 0;
+        startEvent.Invoke();
+           currentCount = 0;
         Debug.Log("Starting Walkthrough");
         for (int i = 0; i < walkthroughSteps.Length; i++)
         {
@@ -115,12 +122,16 @@ public class WalkthroughManager : MonoBehaviour {
 
     }
 
-    public void EndWalkthrough() {
+    public void EndWalkthrough()
+    {
+       
+        DeInitializeNotUsed();
         Debug.Log("Ending Walkthrough");
         StopAllCoroutines();
         captionUI.gameObject.SetActive(false);
         arrow.gameObject.SetActive(false);
         dragHand.gameObject.SetActive(false);
+        endEvent.Invoke();
     }
     List<GameObject> controlswithCG = new List<GameObject>(); //controls that have already CG
     public void InitializeNotUsed(GameObject[] ctrsToBeUsed)
@@ -160,15 +171,16 @@ public class WalkthroughManager : MonoBehaviour {
         //remove all canvas groups 
         foreach(GameObject ctr in controls)
         {
-            if(controlswithCG.Count > 0)
-            if (controlswithCG.Contains(ctr))
-            {
+            //if(controlswithCG.Count > 0)
+            //if (controlswithCG.Contains(ctr))
+            //{
+            if (ctr.GetComponent<CanvasGroup>()!=null)
                 ctr.GetComponent<CanvasGroup>().blocksRaycasts = true;
-                continue;
-            }
+            //    continue;
+            //}
        
-                CanvasGroup cg = ctr.GetComponent<CanvasGroup>();
-                Destroy(cg);
+            //    CanvasGroup cg = ctr.GetComponent<CanvasGroup>();
+            //    Destroy(cg);
            
         }
 
@@ -180,11 +192,12 @@ public class WalkthroughManager : MonoBehaviour {
     IEnumerator AnimateDrag(Transform obj1, Transform obj2, float fadeTime, float animateSpeed, bool IsRepeat)
     {
 
-        Vector3 start = obj1.position;
+
         do
         {
-           // Debug.Log("Starting Drag!");
-           // yield return null;
+            Vector3 start = obj1.position;
+            // Debug.Log("Starting Drag!");
+            // yield return null;
             //fade in
             //start an alpha of 0
             dragHand.color = new Color(1,1,1, 0);  

@@ -6568,8 +6568,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sc: {fileID: 0}
   scenesToLoad:
-  - w1s1
-  - w1s1tos2
+  - w2s3
 --- !u!1001 &1146478435
 Prefab:
   m_ObjectHideFlags: 0
@@ -11338,7 +11337,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.000030517578}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &1893113731

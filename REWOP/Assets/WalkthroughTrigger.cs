@@ -14,6 +14,7 @@ public class WalkthroughTrigger : MonoBehaviour {
 
       if (wtCount == WalkthroughManager.instance.currentCount)
             {
+            Debug.Log("wt count:" + wtCount);
         if (!IsDrag)
         {
                 WalkthroughManager.instance.NextStep();
@@ -51,7 +52,7 @@ public class WalkthroughTrigger : MonoBehaviour {
 
                 if (dp.IsSequence)
                 {
-                    int i = -1;
+                    int i = 0;
                     Debug.Log(transform.childCount);
                     Debug.Log("Starting loopcheck");
                     foreach (Transform child in this.transform)
@@ -67,8 +68,7 @@ public class WalkthroughTrigger : MonoBehaviour {
                         else
                         {
 
-                            i++;
-                            Debug.Log("index:" + i);
+                  
                      // Debug.Log("IF(" + child.GetComponent<CodeBlockMeta>().act.ToString() + "!=" + dp.sequence[i].ToString() + ")");
                             if (i + 1 > dp.sequence.Length) {
                                 WalkthroughManager.instance.notif.SetTrigger("IsNotify");
@@ -79,9 +79,11 @@ public class WalkthroughTrigger : MonoBehaviour {
                                 WalkthroughManager.instance.notif.SetTrigger("IsNotify");
                                 return;
                             }
+                            i++;
+                            Debug.Log("index:" + i);
                         }
                     }
-                    if(i == -1)
+                    if(i <= 0)
                     {
                         WalkthroughManager.instance.notif.SetTrigger("IsNotify");
                         return;

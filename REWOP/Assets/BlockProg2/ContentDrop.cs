@@ -30,7 +30,7 @@ public class ContentDrop : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         if (transform.childCount != childCount)
         {
             childCount = transform.childCount;
-
+            StopAllCoroutines();
             StartCoroutine(LateDrop());
         }
     }
@@ -152,8 +152,12 @@ IEnumerator LateDrop()
                 WalkthroughTrigger[] triggers = GetComponents<WalkthroughTrigger>();
                 foreach (WalkthroughTrigger trigger in triggers)
                 {
-                    if (trigger.IsDrag)
+                    if (trigger.IsDrag && trigger.wtCount == WalkthroughManager.instance.currentCount)
+                    {
                         trigger.triggerTry();
+                        break;
+                    }
+                     
                 }
             }
     }

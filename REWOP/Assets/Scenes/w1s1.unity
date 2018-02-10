@@ -362,7 +362,7 @@ Prefab:
     - target: {fileID: 114131701394054994, guid: 7ccae628646218a448a0437c7148d6b0,
         type: 2}
       propertyPath: Title
-      value: Find the bag near the beach
+      value: Find the bag & return to Lamak
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7ccae628646218a448a0437c7148d6b0, type: 2}

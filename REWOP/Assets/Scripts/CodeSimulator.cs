@@ -76,6 +76,8 @@ public class CodeSimulator : MonoBehaviour
     {
         CS = this;
         Modal = ModalDialogueSystem.instance();
+        Time.timeScale = 1;
+
     }
 
     private void Start()

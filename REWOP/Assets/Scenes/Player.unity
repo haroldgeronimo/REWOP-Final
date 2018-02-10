@@ -5497,9 +5497,9 @@ MonoBehaviour:
   m_fontSize: 28.45
   m_fontSizeBase: 28.45
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 3.8
+  m_fontSizeMax: 28.45
   m_fontStyle: 0
   m_textAlignment: 258
   m_isAlignmentEnumConverted: 1
@@ -5509,7 +5509,7 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_enableWordWrapping: 0
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_firstOverflowCharacterIndex: -1
@@ -6568,7 +6568,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sc: {fileID: 0}
   scenesToLoad:
-  - w2s3
+  - w1s1
+  - w1s1tos2
 --- !u!1001 &1146478435
 Prefab:
   m_ObjectHideFlags: 0

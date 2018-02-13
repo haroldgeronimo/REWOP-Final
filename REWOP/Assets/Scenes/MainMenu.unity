@@ -290,8 +290,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.00025368, y: -0.0000094803}
-  m_SizeDelta: {x: 637.45, y: -46.85}
+  m_AnchoredPosition: {x: -0.0021718, y: -0.0000094803}
+  m_SizeDelta: {x: 637.48, y: -46.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &128539818
 MonoBehaviour:
@@ -312,7 +312,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: Returning Wrath of P
+  m_text: Returning Wrath of Pseudo
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2dcab0d3a1f65e543921535802206fe5, type: 2}
   m_sharedMaterial: {fileID: 21704946657121952, guid: 2dcab0d3a1f65e543921535802206fe5,
@@ -377,10 +377,10 @@ MonoBehaviour:
   m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: 2.0849671, w: 0}
   m_textInfo:
     textComponent: {fileID: 128539818}
-    characterCount: 20
+    characterCount: 25
     spriteCount: 0
     spaceCount: 3
     wordCount: 4
@@ -685,8 +685,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -14.200012}
-  m_SizeDelta: {x: 464.2, y: 243.7}
+  m_AnchoredPosition: {x: 0, y: 6}
+  m_SizeDelta: {x: 464.2, y: 328.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &150390974
 MonoBehaviour:
@@ -700,15 +700,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.253}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
-  m_Type: 0
+  m_Sprite: {fileID: 21300000, guid: b3b325cb4653c6e49901ff01dea7d9d4, type: 3}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -6816,7 +6816,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -195.16}
+  m_AnchoredPosition: {x: 0, y: -193}
   m_SizeDelta: {x: 2694.8, y: 644.3}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &909126523
@@ -14354,7 +14354,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -178.85}
+  m_AnchoredPosition: {x: 0, y: -249}
   m_SizeDelta: {x: 415.6, y: 58.3}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1244903868
@@ -16538,6 +16538,11 @@ MonoBehaviour:
     sceneName: MainMenu
   - music: {fileID: 8300000, guid: f4f393b7b3dba0b4ea269ede11e8e254, type: 3}
     sceneName: w1s1
+  musicStateLib:
+  - music: {fileID: 8300000, guid: 745853fe34bc0ad4582994849625c003, type: 3}
+    title: War
+    mood: 0
+  defaultMusic: {fileID: 0}
 --- !u!1 &1811833430
 GameObject:
   m_ObjectHideFlags: 0
@@ -17466,8 +17471,8 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2003301729}
-        m_MethodName: 
+      - m_Target: {fileID: 1371934986}
+        m_MethodName: MasterVolume
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -17667,7 +17672,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -45.85}
+  m_AnchoredPosition: {x: 0, y: -57}
   m_SizeDelta: {x: 415.4, y: 58.3}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &2048300123
@@ -17689,7 +17694,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: "REWOP \nReturning Wrath of Pseudo\n\nDeveloped By FRIL"
+  m_text: "REWOP \nReturning Wrath of Pseudo\n\nDeveloped By:\nHarold Geronimo\nMark
+    Busa\nFranz Descaya\nRomil Diana"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2dcab0d3a1f65e543921535802206fe5, type: 2}
   m_sharedMaterial: {fileID: 21704946657121952, guid: 2dcab0d3a1f65e543921535802206fe5,
@@ -17724,7 +17730,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_textAlignment: 514
+  m_textAlignment: 258
   m_isAlignmentEnumConverted: 1
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -17735,7 +17741,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: -1
+  m_firstOverflowCharacterIndex: 74
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_enableKerning: 1
@@ -17757,12 +17763,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: -43.588173}
   m_textInfo:
     textComponent: {fileID: 2048300123}
-    characterCount: 51
+    characterCount: 99
     spriteCount: 0
-    spaceCount: 9
-    wordCount: 8
+    spaceCount: 16
+    wordCount: 15
     linkCount: 0
-    lineCount: 4
+    lineCount: 8
     pageCount: 1
     materialCount: 1
   m_havePropertiesChanged: 1

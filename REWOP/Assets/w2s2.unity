@@ -2099,7 +2099,7 @@ MonoBehaviour:
   activeDialog:
     name: Nexo
     sentences:
-    - This must be the puzzle pieces. I'll take it.
+    - This must be the key. I'll take it.
     IsPause: 0
 --- !u!114 &195664896
 MonoBehaviour:
@@ -2194,7 +2194,7 @@ MonoBehaviour:
   activeDialog:
     name: Nexo
     sentences:
-    - This must be the puzzle pieces. I'll take it.
+    - This must be the key. I'll take it.
     IsPause: 0
 --- !u!114 &195664901
 MonoBehaviour:
@@ -2289,7 +2289,7 @@ MonoBehaviour:
   activeDialog:
     name: Nexo
     sentences:
-    - This must be the puzzle pieces. I'll take it.
+    - This must be the key. I'll take it.
     IsPause: 0
 --- !u!114 &195664906
 MonoBehaviour:
@@ -2384,7 +2384,7 @@ MonoBehaviour:
   activeDialog:
     name: Nexo
     sentences:
-    - This must be the puzzle pieces. I'll take it.
+    - This must be the key. I'll take it.
     IsPause: 0
 --- !u!114 &195664911
 MonoBehaviour:

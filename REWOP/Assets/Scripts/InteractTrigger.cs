@@ -55,7 +55,8 @@ public class InteractTrigger : MonoBehaviour {
                     qct.CollectTrigger();
                     return;
                 }
-                Debug.Log("Checking if " + QuestManager.instance.activeQuest + " = " + qt.questNumber);
+                Debug.Log("Checking if " + QuestManager.instance.activeQuest);
+                Debug.Log(" = " + qt.questNumber);
                 if (QuestManager.instance.questCompleted[qt.questNumber] || (QuestManager.instance.activeQuest == qt.questNumber && qt.IsStartQuest))
                 {
 

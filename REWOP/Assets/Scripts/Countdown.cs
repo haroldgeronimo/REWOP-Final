@@ -57,7 +57,7 @@ public class Countdown : MonoBehaviour {
         if (!IsCountingDown)
         {
             //to do when timer finished!
-
+            PlayerManager.instance.KillPlayer();
             Debug.Log("Timer Finished!");
 
         }

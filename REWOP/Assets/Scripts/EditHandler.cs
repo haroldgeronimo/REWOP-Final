@@ -30,19 +30,19 @@ public class EditHandler : MonoBehaviour, IPointerDownHandler
             clicked = 0;
             clicktime = 0;
             Debug.Log("Double CLick: " + this.GetComponent<RectTransform>().name);
-            if (IsRepeat)
-            {
-                repeat.GetComponent<DroppedReferenceHolder>().droppedContent = this.gameObject;
-                if (RepeatAnimator == null) return;
-                RepeatAnimator.SetBool("IsOpen", true);
-            }
-            else
-            {
-                condition.GetComponent<DroppedReferenceHolder>().droppedContent = this.gameObject;
+            //if (IsRepeat)
+            //{
+            //    repeat.GetComponent<DroppedReferenceHolder>().droppedContent = this.gameObject;
+            //    if (RepeatAnimator == null) return;
+            //    RepeatAnimator.SetBool("IsOpen", true);
+            //}
+            //else
+            //{
+            //    condition.GetComponent<DroppedReferenceHolder>().droppedContent = this.gameObject;
         
-                if (ConditionAnimator == null) return;
-                ConditionAnimator.SetBool("IsOpen", true);
-            }
+            //    if (ConditionAnimator == null) return;
+            //    ConditionAnimator.SetBool("IsOpen", true);
+            //}
 
         }
         else if (clicked > 2 || Time.time - clicktime > 1) clicked = 0;

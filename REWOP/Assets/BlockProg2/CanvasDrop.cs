@@ -6,7 +6,10 @@ using UnityEngine.EventSystems;
 
 public class CanvasDrop : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IDropHandler
 {
-   
+    private void Start()
+    {
+        gameObject.GetComponent<RectTransform>().anchoredPosition = new Vector2(0f, 0f);
+    }
 
     public void OnDrop(PointerEventData eventData)
     {

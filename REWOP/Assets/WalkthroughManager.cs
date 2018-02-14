@@ -176,6 +176,11 @@ public class WalkthroughManager : MonoBehaviour {
             //{
             if (ctr.GetComponent<CanvasGroup>()!=null)
                 ctr.GetComponent<CanvasGroup>().blocksRaycasts = true;
+            else
+            {
+
+                ctr.AddComponent<CanvasGroup>();
+            }
             //    continue;
             //}
        

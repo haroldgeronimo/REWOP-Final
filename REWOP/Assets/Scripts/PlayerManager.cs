@@ -34,7 +34,9 @@ public class PlayerManager : MonoBehaviour {
     public GameObject controlTapToInteract;
     public void KillPlayer() {
 
+        player.GetComponentInChildren<Animator>().SetTrigger("DeathTrigger");
         StartCoroutine(DeathDelay());
+
 
     }
 

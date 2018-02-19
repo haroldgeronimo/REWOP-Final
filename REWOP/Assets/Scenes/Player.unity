@@ -1544,8 +1544,8 @@ RectTransform:
   m_Father: {fileID: 1061034714}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -2339,7 +2339,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &396120214
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3189,11 +3189,11 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 0
+  m_havePropertiesChanged: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
+  m_isInputParsingRequired: 1
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -3457,7 +3457,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -3729,8 +3729,8 @@ RectTransform:
   m_Father: {fileID: 959857987}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -4186,8 +4186,8 @@ RectTransform:
   m_Father: {fileID: 236819317}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -5064,11 +5064,11 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 0
+  m_havePropertiesChanged: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
+  m_isInputParsingRequired: 1
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -8548,11 +8548,11 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 0
+  m_havePropertiesChanged: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
+  m_isInputParsingRequired: 1
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -8891,11 +8891,11 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 0
+  m_havePropertiesChanged: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
+  m_isInputParsingRequired: 1
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -10181,11 +10181,11 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 0
+  m_havePropertiesChanged: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
+  m_isInputParsingRequired: 1
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -10544,7 +10544,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -11118,7 +11118,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -11600,11 +11600,11 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 0
+  m_havePropertiesChanged: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
+  m_isInputParsingRequired: 1
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -11677,139 +11677,139 @@ MonoBehaviour:
   Achievements:
   - AchID: 0
     Name: Two Block Coder
-    Description: Used two codeblocks to defeat a virus
+    Description: 'Mission: Use two codeblocks to defeat a virus'
     ReqQuantity: 1
     CurQuantity: 0
     granted: 0
-    icon: {fileID: 21300000, guid: d23f13bc91bce174580d558182dc42b8, type: 3}
+    icon: {fileID: 21300008, guid: 31c4bf3637c7a37478a5194545701f45, type: 3}
     tag: TwoBlock
   - AchID: 1
     Name: Loop it!
-    Description: Received the repeat block
+    Description: 'Mission: Acquire the repeat block'
     ReqQuantity: 1
     CurQuantity: 0
     granted: 0
-    icon: {fileID: 21300000, guid: d23f13bc91bce174580d558182dc42b8, type: 3}
+    icon: {fileID: 21300000, guid: 31c4bf3637c7a37478a5194545701f45, type: 3}
     tag: Coding
   - AchID: 2
     Name: What if?
-    Description: Received the decision block
+    Description: 'Mission: Acquire the decision block'
     ReqQuantity: 1
     CurQuantity: 0
     granted: 0
-    icon: {fileID: 21300000, guid: d23f13bc91bce174580d558182dc42b8, type: 3}
+    icon: {fileID: 21300002, guid: 31c4bf3637c7a37478a5194545701f45, type: 3}
     tag: Coding
   - AchID: 3
     Name: Code Warrior
-    Description: Perfected a Code Combat
+    Description: 'Mission: Finish a perfect Code Combat'
     ReqQuantity: 1
     CurQuantity: 0
     granted: 0
-    icon: {fileID: 21300000, guid: 0c98f9dea3fa62140855614d3f64747f, type: 3}
+    icon: {fileID: 21300006, guid: 31c4bf3637c7a37478a5194545701f45, type: 3}
     tag: PerfCounters
   - AchID: 4
     Name: Code Legend
-    Description: Perfected 3 Code Combats
+    Description: 'Mission: Finish 3 perfect Code Combats'
     ReqQuantity: 3
     CurQuantity: 0
     granted: 0
-    icon: {fileID: 21300000, guid: 0c98f9dea3fa62140855614d3f64747f, type: 3}
+    icon: {fileID: 21300006, guid: 31c4bf3637c7a37478a5194545701f45, type: 3}
     tag: PerfCounters
   - AchID: 5
     Name: Epic Coder
-    Description: Perfected 6 Code Combats
+    Description: 'Mission: Finish 6 perfect Code Combats'
     ReqQuantity: 6
     CurQuantity: 0
     granted: 0
-    icon: {fileID: 21300000, guid: 0c98f9dea3fa62140855614d3f64747f, type: 3}
+    icon: {fileID: 21300006, guid: 31c4bf3637c7a37478a5194545701f45, type: 3}
     tag: PerfCounters
   - AchID: 6
     Name: Code Creator
-    Description: Created an optimal code block script
+    Description: 'Mission: Create an optimal code block script'
     ReqQuantity: 1
     CurQuantity: 0
     granted: 0
-    icon: {fileID: 21300000, guid: d23f13bc91bce174580d558182dc42b8, type: 3}
+    icon: {fileID: 21300004, guid: 31c4bf3637c7a37478a5194545701f45, type: 3}
     tag: Optimal
   - AchID: 7
     Name: Flawless Coder
-    Description: Created 3 optimal code block script
+    Description: 'Mission: Create 3 optimal code block script'
     ReqQuantity: 3
     CurQuantity: 0
     granted: 0
-    icon: {fileID: 21300000, guid: d23f13bc91bce174580d558182dc42b8, type: 3}
+    icon: {fileID: 21300004, guid: 31c4bf3637c7a37478a5194545701f45, type: 3}
     tag: Optimal
   - AchID: 8
     Name: Extreme Coder
-    Description: Created 6 optimal code block script
+    Description: 'Mission: Create 6 optimal code block script'
     ReqQuantity: 6
     CurQuantity: 0
     granted: 0
-    icon: {fileID: 21300000, guid: d23f13bc91bce174580d558182dc42b8, type: 3}
+    icon: {fileID: 21300004, guid: 31c4bf3637c7a37478a5194545701f45, type: 3}
     tag: Optimal
   - AchID: 9
-    Name: Antivirus
-    Description: Defeated 10 viruses
+    Name: Virus Breaker
+    Description: 'Mission: Destroy 10 viruses'
     ReqQuantity: 10
     CurQuantity: 0
     granted: 0
-    icon: {fileID: 21300000, guid: b9ff80ccc460fed4d8984611ca4bf488, type: 3}
+    icon: {fileID: 21300010, guid: 31c4bf3637c7a37478a5194545701f45, type: 3}
     tag: killVirus
   - AchID: 10
-    Name: White-hat Hacker
-    Description: defeated 20 viruses
+    Name: Virus Killer
+    Description: 'Mission: Destroy 20 viruses'
     ReqQuantity: 20
     CurQuantity: 0
     granted: 0
-    icon: {fileID: 21300000, guid: b9ff80ccc460fed4d8984611ca4bf488, type: 3}
+    icon: {fileID: 21300010, guid: 31c4bf3637c7a37478a5194545701f45, type: 3}
     tag: killVirus
   - AchID: 11
-    Name: The Anonymous
-    Description: defeated 30 viruses
+    Name: Virus Conqueror
+    Description: 'Mission: Destroy 30 viruses'
     ReqQuantity: 30
     CurQuantity: 0
     granted: 0
-    icon: {fileID: 21300000, guid: b9ff80ccc460fed4d8984611ca4bf488, type: 3}
+    icon: {fileID: 21300010, guid: 31c4bf3637c7a37478a5194545701f45, type: 3}
     tag: killVirus
   - AchID: 12
     Name: Drone Damage
-    Description: Defeated a Drone Virus
+    Description: 'Mission: Destroy a Drone Virus'
     ReqQuantity: 1
     CurQuantity: 0
     granted: 0
-    icon: {fileID: 21300000, guid: b9ff80ccc460fed4d8984611ca4bf488, type: 3}
+    icon: {fileID: 21300012, guid: 31c4bf3637c7a37478a5194545701f45, type: 3}
     tag: killVirusDrone
   - AchID: 13
     Name: Rock Rookie
-    Description: Defeated a Rook Virus
+    Description: 'Mission: Destroy a Rook Virus'
     ReqQuantity: 1
     CurQuantity: 0
     granted: 0
-    icon: {fileID: 21300000, guid: b9ff80ccc460fed4d8984611ca4bf488, type: 3}
+    icon: {fileID: 21300014, guid: 31c4bf3637c7a37478a5194545701f45, type: 3}
     tag: killVirusRook
   - AchID: 14
     Name: Drone Destroyer
-    Description: Defeated 2 Drone Viruses
+    Description: 'Mission: Destroy 2 Drone Viruses'
     ReqQuantity: 2
     CurQuantity: 0
     granted: 0
-    icon: {fileID: 21300000, guid: b9ff80ccc460fed4d8984611ca4bf488, type: 3}
+    icon: {fileID: 21300012, guid: 31c4bf3637c7a37478a5194545701f45, type: 3}
     tag: killVirusDrone
   - AchID: 15
     Name: Rook Exterminator
-    Description: Defeated 4 Rook Viruses
+    Description: 'Mission: Destroy 4 Rook Viruses'
     ReqQuantity: 4
     CurQuantity: 0
     granted: 0
-    icon: {fileID: 21300000, guid: b9ff80ccc460fed4d8984611ca4bf488, type: 3}
+    icon: {fileID: 21300014, guid: 31c4bf3637c7a37478a5194545701f45, type: 3}
     tag: killVirusRook
   - AchID: 16
     Name: Legendary Master
-    Description: Destroyed the Master Virus
+    Description: 'Mission: Destroy the Master Virus'
     ReqQuantity: 1
     CurQuantity: 0
     granted: 0
-    icon: {fileID: 21300000, guid: b9ff80ccc460fed4d8984611ca4bf488, type: 3}
+    icon: {fileID: 21300016, guid: 31c4bf3637c7a37478a5194545701f45, type: 3}
     tag: killVirusMaster
   AchievementView: {fileID: 0}
 --- !u!95 &1951911812

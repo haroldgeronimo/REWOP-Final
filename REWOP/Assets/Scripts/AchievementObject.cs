@@ -30,7 +30,7 @@ public class AchievementObject : MonoBehaviour {
         requiredAmount = AM.ReqQuantity;
         if (currentAmount >= requiredAmount)
         {
-            status.text = "Completed";
+            status.text = "Mission Accomplished";
             statusUIFill.color = new Color(0.41f,0.81f,0.32f);
            
         }

@@ -10,7 +10,6 @@ public class ES2UserType_AchievementData : ES2Type
 	{
 		AchievementData data = (AchievementData)obj;
 		// Add your writer.Write calls here.
-		writer.Write(data.Achievements);
 
 	}
 	
@@ -25,7 +24,6 @@ public class ES2UserType_AchievementData : ES2Type
 	{
 		AchievementData data = (AchievementData)c;
 		// Add your reader.Read calls here to read the data into the object.
-		data.Achievements = reader.ReadList<AchievementMeta>();
 
 	}
 	

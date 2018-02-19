@@ -16,6 +16,7 @@ public class ES2UserType_AchievementMeta : ES2Type
 		writer.Write(data.ReqQuantity);
 		writer.Write(data.CurQuantity);
 		writer.Write(data.granted);
+		writer.Write(data.icon);
 		writer.Write(data.tag);
 
 	}
@@ -37,6 +38,7 @@ public class ES2UserType_AchievementMeta : ES2Type
 		data.ReqQuantity = reader.Read<System.Int32>();
 		data.CurQuantity = reader.Read<System.Int32>();
 		data.granted = reader.Read<System.Boolean>();
+		data.icon = reader.Read<UnityEngine.Sprite>();
 		data.tag = reader.Read<System.String>();
 
 	}

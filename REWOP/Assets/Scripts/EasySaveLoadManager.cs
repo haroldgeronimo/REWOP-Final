@@ -65,7 +65,7 @@ public static class PlayerState {
         ES2.Save(PlayerManager.instance.player.transform.position, folder + "Player.dat?tag=position");
         ES2.Save(PlayerManager.instance.player.transform.rotation, folder + "Player.dat?tag=rotation");
         ES2.Save(PlayerManager.instance.player.GetComponent<PlayerStats>().currentHealth, folder + "Player.dat?tag=health");
-        ES2.Save(AchievementData.instance.Achievements, folder + "Player.dat?tag=achievements");
+        ES2.Save(SaveModem.getAcheivementCount(), folder + "Player.dat?tag=achievements");
         ES2.Save(GameObject.FindGameObjectWithTag("Sword").GetComponent<SkinnedMeshRenderer>().enabled, folder + "Player.dat?tag=sword");
         ES2.Save(GameObject.FindGameObjectWithTag("AttackButton").GetComponent<Image>().raycastTarget, folder + "Player.dat?tag=attackBtn");
         ES2.Save(GameObject.FindGameObjectWithTag("AttackButton").GetComponent<Image>().color, folder + "Player.dat?tag=attackBtnClr");
@@ -75,14 +75,52 @@ public static class PlayerState {
         PlayerManager.instance.player.transform.position = ES2.Load<Vector3>(folder + "Player.dat?tag=position");
         PlayerManager.instance.player.transform.rotation = ES2.Load<Quaternion>(folder + "Player.dat?tag=rotation");
         PlayerManager.instance.player.GetComponent<PlayerStats>().currentHealth = ES2.Load<int>(folder + "Player.dat?tag=health");
-        AchievementData.instance.Achievements = ES2.LoadList<AchievementMeta>(folder + "Player.dat?tag=achievements");
+        SaveModem.setAcheivementCount(ES2.LoadList<int>(folder + "Player.dat?tag=achievements"));
         GameObject.FindGameObjectWithTag("Sword").GetComponent<SkinnedMeshRenderer>().enabled = ES2.Load<bool>(folder + "Player.dat?tag=sword");
         GameObject.FindGameObjectWithTag("AttackButton").GetComponent<Image>().raycastTarget = ES2.Load<bool>(folder + "Player.dat?tag=attackBtn");
         GameObject.FindGameObjectWithTag("AttackButton").GetComponent<Image>().color = ES2.Load<Color>(folder + "Player.dat?tag=attackBtnClr");
     }
-    
-}
 
+
+
+}
+#region SaveModem
+public static class SaveModem
+{
+    
+   public static List<int> getAcheivementCount()
+    {
+        List<int> currentCounts = new List<int>();
+        if (AchievementData.instance.Achievements == null)
+            return currentCounts;
+        foreach (AchievementMeta am in AchievementData.instance.Achievements)
+        {
+            currentCounts.Add(am.CurQuantity);
+        }
+        return currentCounts;
+    }
+  
+    public static void setAcheivementCount(List<int> count)
+    {
+        if (AchievementData.instance.Achievements == null)
+            return;
+        if (AchievementData.instance.Achievements.Count != count.Count)
+        {
+            Debug.LogError("Achievement count does not equal saved count");
+        }
+
+        for (int i = 0; i < AchievementData.instance.Achievements.Count; i++)
+        {
+          if (i > count.Count-1)
+            {
+                Debug.LogError("Saved count is not parallel with current Achievment count, please try manually saving the game or go to the nearest checkpoint!");
+                break;
+            }
+            AchievementData.instance.Achievements[i].CurQuantity = count[i];
+        }
+    }
+}
+#endregion
 public static class SceneState
 {
     public static string folder = EasySaveLoadManager.Instance.folder;
